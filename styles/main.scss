@@ -40,11 +40,33 @@ html, body{
 
     display: flex;
     flex-direction: column;   
-    height: 100%; 
-    // position: fixed;
-    // height: 100;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
     justify-content: space-between;
     overflow-y: scroll;
+
+    &.shrinked{
+        margin-left: $slideNavigationMarginLeft;
+        transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
+    }
+
+    &.shrinked.is-on-mobile-width{
+        width: 250px;
+        
+    }
+
+    &.is-on-mobile-width{
+        z-index: 1;
+        right: 0;
+        width: 100%;
+        // this is inside navigation left slider
+        .navigation-toggler{
+            display: block;
+        }
+    }
 
     
     &::-webkit-scrollbar {
@@ -57,7 +79,16 @@ html, body{
         background: #555;
     }
       
-
+    // this is inside navigation left slider
+    .navigation-toggler{
+        position: absolute;
+        right: 0;
+        top: 10%;
+        display: none;
+        padding: 20px 15px;
+        background-color: white;
+        border-radius: 10px 0px 0px 10px;
+    }
 
     .left-body-content{
         display: flex;
@@ -162,10 +193,7 @@ html, body{
 
 
     // if navigation shrinked
-    &.shrinked{
-        margin-left: $slideNavigationMarginLeft;
-        transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
-    }
+    
 
 
     .rights-container{
@@ -190,14 +218,30 @@ html, body{
     //position: relative;   //  causes popper to not work
     height: 100vh;
     overflow-y: scroll;
+    position: relative;
+    margin-left: 250px; 
+
+    &.widened{
+        margin-left: 0;
+        transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
+    }
 
 
     .header-container{
+        background-color: white;;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
+        position: sticky;
+        top: 0;
+        left:0; 
+        right : 0;
         box-shadow: 0px 1px 5px -2px gray;
+
+        &.widened{
+            margin-left: 0;
+            transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
+        }
 
         .left-header{
             
@@ -208,7 +252,8 @@ html, body{
                 display: flex;
                 align-items: center;
             }
-    
+            
+            // this is inside the top header
             .navigation-toggler{
                 padding: 20px 30px;
                 cursor: pointer;
@@ -404,7 +449,7 @@ html, body{
                     .announcement-item{
                         border:1px solid   #cfcfcf;
                         border-radius: 10px;
-                        padding: 10px 10px;
+                        padding: 20px;
                         margin-bottom: 20px;
 
                         .announcement-item-header{

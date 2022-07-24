@@ -24,9 +24,27 @@ html, body {
   transition: 300ms;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   justify-content: space-between;
   overflow-y: scroll;
+}
+.left-body.shrinked {
+  margin-left: -250px;
+  transition: all 300ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
+}
+.left-body.shrinked.is-on-mobile-width {
+  width: 250px;
+}
+.left-body.is-on-mobile-width {
+  z-index: 1;
+  right: 0;
+  width: 100%;
+}
+.left-body.is-on-mobile-width .navigation-toggler {
+  display: block;
 }
 .left-body::-webkit-scrollbar {
   width: 5px;
@@ -36,6 +54,15 @@ html, body {
 }
 .left-body::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.left-body .navigation-toggler {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  display: none;
+  padding: 20px 15px;
+  background-color: white;
+  border-radius: 10px 0px 0px 10px;
 }
 .left-body .left-body-content {
   display: flex;
@@ -117,10 +144,6 @@ html, body {
   display: flex;
   justify-content: center;
 }
-.left-body.shrinked {
-  margin-left: -250px;
-  transition: all 300ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
-}
 .left-body .rights-container {
   text-align: center;
   color: gray;
@@ -135,12 +158,28 @@ html, body {
   flex-grow: 1;
   height: 100vh;
   overflow-y: scroll;
+  position: relative;
+  margin-left: 250px;
+}
+.right-body.widened {
+  margin-left: 0;
+  transition: all 300ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
 }
 .right-body .header-container {
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   box-shadow: 0px 1px 5px -2px gray;
+}
+.right-body .header-container.widened {
+  margin-left: 0;
+  transition: all 300ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
 }
 .right-body .header-container .left-header {
   display: flex;
@@ -319,7 +358,7 @@ html, body {
 .right-body .main-content-container .content .announcement-container .announcement-content .announcement-item {
   border: 1px solid #cfcfcf;
   border-radius: 10px;
-  padding: 10px 10px;
+  padding: 20px;
   margin-bottom: 20px;
 }
 .right-body .main-content-container .content .announcement-container .announcement-content .announcement-item .announcement-item-header .title-control-container {
