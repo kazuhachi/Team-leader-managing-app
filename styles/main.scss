@@ -1,6 +1,7 @@
 $navigationColorBlack : #1e1e1e;
 $navigationWidth : 250px;
 $readeableColor : #636363;
+$defaultFontSize: 14px;
 
 
 // toggling navigation
@@ -12,11 +13,12 @@ $navigationTransition : 300ms;
 }
 a{
     text-decoration: none;
+    color: inherit;
 }
 html, body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    font-size: $defaultFontSize;
 }
 
 
@@ -414,7 +416,7 @@ html, body{
         }
 
         .content{
-            padding-left: 10px;
+            padding: 0px 10px;
             .announcement-container{
                 padding: 0px 20px;
                 .header{
@@ -531,6 +533,247 @@ html, body{
                 }
             }
         }
+
+
+        
+        .tab-container{
+            display: flex;
+            flex-direction: column;
+
+            .tab-button-container{
+                display: flex;
+                flex-direction: row;
+                padding: 0px 40px;
+                width: 100%;
+                // border-bottom: 1px solid #cdcdcd;
+                .tab-item{
+                    transform: translateY(1px);
+                    padding: 10px 20px;
+                    // border-radius: 10px 10px 0px 0px;
+                    cursor: pointer;
+                    user-select: none;
+                    margin-right: 2px;
+                    border: none;
+                    margin-right: 10px;
+
+                    &.selected{
+                        border-bottom: 4px solid #7575c5;
+                        
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+            .tab-content{
+                padding: 10px;
+                // border: 1px solid #cdcdcd;
+
+                .table-schedule{
+                    font-size: 14px;
+                    padding: 30px;
+
+                    .criteria-result-container{
+                        display: flex;
+                        padding: 10px 5px;
+                        flex-direction: column;
+                        // align-items: center
+                        
+                        .criteria-item-container{
+                            padding-top: 5px;
+                            .criteria-item{
+                                display: inline-block;
+                                padding: 10px 20px;
+                                border-radius: 10px;
+                                margin-right: 5px;
+                                background-color: #8d7fbd;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    table{
+                        
+                    color: #636363;
+                    }
+                    td{
+                        padding: 5px;
+                        vertical-align: middle
+                    }
+
+                    th span.picture img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 10px;
+                        margin-right: 10px;
+                    }
+                    th div.date{
+                        // display: flex;
+
+                        .day-of-the-week{
+                            margin-right: 10px;
+                        }
+
+                        & > div{
+                            display:  block;
+                        }
+                        
+                    }
+
+                    thead th{
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+
+                    // make table corner curved
+                    tr:first-child th:first-child{
+                        border-radius: 10px 0px 0px 0px;
+                    }
+                    tr:first-child th:last-child{
+                        border-radius: 0px 10px 0px 0px;
+                    }
+
+                    tr:last-child td:first-child{
+                        border-radius:  0px 0px 0px 10px;
+                    }
+                    tr:last-child td:last-child{
+                        border-radius:  0px 0px 10px 0px;
+                    }
+
+
+
+                    // ================================================
+                    // active day or today
+
+                    th:nth-child(4), td:nth-child(4){
+                        background-color: #2e2e9117;
+                        border-left: 2px solid  #673ab7;
+                        border-right: 2px solid  #673ab7;
+                        // background-color: blue;
+                    }
+                    th:nth-child(4){
+                        // background-color: #538ec7;
+                        // color: white;
+                        border-radius: 5px 5px 0px 0px;
+                        border-top: 2px solid  #673ab7;
+                        
+                    }
+
+                    tr:last-child{
+                        td:nth-child(4){
+                            border-bottom: 2px solid  #673ab7;
+                            border-radius:  0px 0px 5px 5px;
+                        }
+                    }
+                    // =================================================
+                    
+                    // tr td:nth-child(1), tr th:nth-child(1){
+                        // background-color: gray;
+                        // color:  white;
+                        // padding: auto 10px;
+                    // }
+                    span.leave{
+                        padding: 10px 10px;
+                        border-radius: 10px;
+                        color: white;
+                        display: inline-block
+                    }
+
+                    span.day-off{
+                        background-color: green;
+                    }
+                    span.vacation-leave{
+                        background-color: green;
+                    }
+                    span.sick-leave{
+                        background-color: #245772ba;
+                    }
+                    span.absent{
+                        background-color: #df3f3f;
+                    }
+                    span.emergency-leave{
+                        background-color: green;
+                    }
+                    span.off-set{
+                        background-color: green;
+                    }
+                    span.emergency-leave{
+                        background-color: green;
+                    }
+                    span.compationate-leave{
+                        background-color: green;
+                    }
+
+                    .schedule-header-info{
+                        font-size: 20px;
+                        padding: 20px;
+                        font-weight: bold;
+                        background-color: #538ec7;
+                        color: white;
+                        border-radius:  10px 10px 0px 0px;
+                        & > div{
+                            display: inline-block;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+.control-container{
+    padding: 30px;
+
+    .control-footer{
+        margin-top: 10px;;
+    }
+}
+
+
+
+.control-container{
+    display: flex;
+    align-items: flex-end;
+}
+
+.control-component{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    // border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0px 20px 10px 0px;
+    .label-icon{
+        padding: 5px 5px;
+        border-radius: 10px 0px 0px 10px;
+
+        i{
+            margin: 0px 5px;
+            font-size: 20px;
+        }
+    }
+
+    input, select{
+        border: none;
+        width: initial;
+        height: 40px;
+        min-width: 300px;
+        border: 1px solid #cdcdcd; 
+        text-align: center;
+        border-radius: 10px
+    }
+    button{
+        
+        height: 40px;
+        padding: 10px 20px;
+        background-color: #538ec7;
+        color: white;
+        border: none;
+        border-radius: 10px;
     }
 }
 
@@ -545,3 +788,28 @@ html, body{
     width: 100%;
     z-index: 1;
 }
+
+
+
+
+// custom style for datatable
+// #example_filter, #example_length{
+//     font-size: 14px;
+//     margin-bottom: 10px;
+//     label{    
+//         align-items: center;
+//         display: flex;
+//         flex-direction: row;
+//         select{
+//             width: 50px;
+//             margin: 0px 5px
+//         }
+//         input{
+//             margin-left : 5px;
+//         }
+//     }
+// }
+
+// #example_filter, #example_paginate{
+//     float: right;
+// }

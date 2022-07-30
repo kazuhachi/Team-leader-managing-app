@@ -159,12 +159,12 @@
                 <div class="main-content-container">
                     <div class="navigation-header">
                         <div class="navigation-title">
-                            <span class="icon"><i class="fa-solid fa-calendar"></i></span>
-                            <span class="text">SCHEDULE</span>
+                            <span class="icon"><i class="fa-solid fa-calendar-day"></i></span>
+                            <span class="text">LEAVES</span>
                         </div>
                     </div>
                     <div class="content  g-0">
-                        <div class="tab-container">
+                        <div class="tab-container" style="display: none;">
                             <div class="tab-button-container">
                                 <a class="tab-item selected" >
                                         <div class="icon"></div>
@@ -186,7 +186,6 @@
                                         <div class="control-component" control-type="select-calendar">
                                             <div class="label-icon">
                                                 Select week
-                                                
                                             </div>
                                             <input type="text" class="input-date-picker">
                                         </div>
@@ -199,7 +198,6 @@
                                                 <option value="morning">Morning Shift</option>
                                             </select>
                                         </div>
-                                        
                                         <!-- <div class="control-footer"> -->
                                             <!-- for submit buttons -->
                                             <div class="control-component" control-type="select-calendar">
@@ -211,26 +209,14 @@
                                     </div>
                                     
                                     <div class="table-schedule">
-                                        <!-- <div class="schedule-header-info">
+                                        <div class="schedule-header-info">
                                             <div class="queried-date-container">
-                                                <span>Schedule : </span>
+                                                <!-- <span>Schedule : </span> -->
                                                 <span class="queried-date">July 25 - July 31 </span>
                                             </div>
                                             <div class="queried-shift-container">
-                                                <span>Shift : </span>
+                                                <!-- <span>Shift : </span> -->
                                                 <span class="queried-date">Morning Shift</span>
-                                            </div>
-                                        </div> -->
-                                        <div class="criteria-result-container">
-                                            <div class="label">Chosen criteria : </div>
-                                            <div class="criteria-item-container">
-                                                <div class="criteria-item">
-                                                    July 25. 2022 - July 31, 2022
-                                                </div>
-                                                <div class="criteria-item">
-                                                    Morning Shift
-                                                </div>
-
                                             </div>
                                         </div>
                                         <table id="example" class="table table-hover table-bordered table-responsive-sm" >
@@ -253,8 +239,8 @@
                                             </thead>
                                             <tbody class="">
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>
+                                                    <th>1</th>
+                                                    <th>
                                                         <span class="picture">
                                                             <!-- <img src="images/ppPlaceholder.png">  -->
                                                             Mark Vincent
@@ -269,13 +255,13 @@
                                                     <td>6am - 2pm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2</td>
-                                                    <td>
+                                                    <th>2</th>
+                                                    <th>
                                                         <span class="picture">
                                                             <!-- <img src="images/pp2.jpeg">  -->
                                                             CJ
                                                         </span>
-                                                    </td>
+                                                    </th>
                                                     <td>6am - 2pm</td>
                                                     <td><span class="leave day-off">Day off</span></td>
                                                     <td>6am - 2pm</td>
@@ -285,13 +271,13 @@
                                                     <td>6am - 2pm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>3</td>
-                                                    <td>
+                                                    <th>3</th>
+                                                    <th>
                                                         <span class="picture">
                                                             <!-- <img src="images/pp3.jpeg">  -->
                                                             Zoren
                                                         </span>
-                                                    </td>
+                                                    </th>
                                                     <td>6am - 2pm</td>
                                                     <td>6am - 2pm</td>
                                                     <td>6am - 2pm</td>
@@ -301,13 +287,13 @@
                                                     <td>6am - 2pm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>4</td>
-                                                    <td>
+                                                    <th>4</th>
+                                                    <th>
                                                         <span class="picture">
                                                             <!-- <img src="images/pp4.jpeg">  -->
                                                             Vergel
                                                         </span>
-                                                    </td>
+                                                    </th>
                                                     <td>6am - 2pm</td>
                                                     <td>6am - 2pm</td>
                                                     <td>6am - 2pm</td>
@@ -317,13 +303,13 @@
                                                     <td><span class="leave day-off">Day off</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>5</td>
-                                                    <td>
+                                                    <th>5</th>
+                                                    <th>
                                                         <span class="picture">
                                                             <!-- <img src="images/pp5.jpeg">  -->
                                                             Princess
                                                         </span>
-                                                    </td>
+                                                    </th>
                                                     <td>6am - 2pm</td>
                                                     <td>6am - 2pm</td>
                                                     <td>6am - 2pm</td>
@@ -333,13 +319,13 @@
                                                     <td><span class="leave day-off">Day off</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>6</td>
-                                                    <td>
+                                                    <th>6</th>
+                                                    <th>
                                                         <span class="picture">
                                                             <!-- <img src="images/pp6.jpeg">  -->
                                                             Louie
                                                         </span>
-                                                    </td>
+                                                    </th>
                                                     <td><span class="leave sick-leave">Sick leave</span></td>
                                                     <td><span class="leave sick-leave">Sick leave</span></td>
                                                     <td><span class="leave sick-leave">Sick leave</span></td>
@@ -349,13 +335,13 @@
                                                     <td>6am - 2pm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>7</td>
-                                                    <td>
+                                                    <th>7</th>
+                                                    <th>
                                                         <span class="picture">
                                                             <!-- <img src="images/pp7.jpeg">  -->
                                                             John Patrick
                                                         </span>
-                                                    </td>
+                                                    </th>
                                                     <td><span class="leave day-off">Day off</span></td>
                                                     <td>6am - 2pm</td>
                                                     <td>6am - 2pm</td>
@@ -365,13 +351,13 @@
                                                     <td>6am - 2pm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>8</td>
-                                                    <td>
+                                                    <th>8</th>
+                                                    <th>
                                                         <span class="picture">
                                                             <!-- <img src="images/pp8.jpeg">  -->
                                                             Lawiza
                                                         </span>
-                                                    </td>
+                                                    </th>
                                                     <td>6am - 2pm</td>
                                                     <td>6am - 2pm</td>
                                                     <td><span class="leave day-off">Day off</span></td>
@@ -391,6 +377,7 @@
                                 
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
