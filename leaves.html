@@ -22,6 +22,7 @@
         <!--  --> <script src="scripts/notificationPopUp.js"></script>
         <!--  --> <script src="scripts/slidePages.js"></script>
         <!--  --> <script src="scripts/tab.js"></script>
+        <!--  --> <script src="scripts/popUpforms.js"></script>
 
 
         <!-- datepicker -->
@@ -331,7 +332,7 @@
                                             <div class="label-icon">
                                                 Select week
                                             </div>
-                                            <input type="text" class="input-date-picker">
+                                            <input type="text" class="input-date-range-picker">
                                         </div>
                                         <div class="control-component" control-type="dropdown">
                                             <div class="label-icon">
@@ -354,19 +355,24 @@
                                     
                                     <div class="pending-request-table">
                                         <div class="table-action-container">
-                                            <div class="label">
-                                                Action :
-                                                
-                                            </div>
+                                            
                                             <div class="action-button-container">
-                                                <button class="edit-selected-data ">
-                                                    <i class="fa-regular fa-pen-to-square "></i>
-                                                    Modify
-                                                </button>
-                                                <button class="delete-selected-data unusable">
-                                                    <i class="fa-regular fa-trash-can"></i>
-                                                    Delete
-                                                </button>
+                                                <div class="left-button-containers">
+                                                    <button class="edit-selected-data unusable">
+                                                        <i class="fa-regular fa-pen-to-square "></i>
+                                                        Modify
+                                                    </button>
+                                                    <button class="delete-selected-data unusable">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                                <div class="right-button-containers">
+                                                    <button class="add-request-leave">
+                                                        <i class="fa-regular fa-calendar-plus"></i>
+                                                        Request a leave
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <table id="example" class="table table-hover table-bordered table-responsive-sm" >
@@ -421,7 +427,7 @@
                                         <!-- if no data available -->
                                         
                                     </div>
-                                    <div class="no-data-table-placeholder">
+                                    <div class="no-data-table-placeholder" style="display: none">
                                         No pending request.
                                     </div>
                                     
@@ -434,18 +440,21 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
+        <div class="popper-forms-container">
+            
+        </div>
+        
     </body>
     <script>
         $(document).ready(function(){
-            $(`.input-date-picker`).daterangepicker();
-            $(document).ready(function () {
-                $('#example').DataTable({
-                    searching : false,
-                    paging :  false,
-                    
-                });
+            // initiate datepicker
+            $("body .input-date-range-picker").daterangepicker();
+
+            $('#example').DataTable({
+                searching : false,
+                paging :  false,
+                
             });
         })
     </script>

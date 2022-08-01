@@ -86,7 +86,7 @@
   accent-color: #7e84a5;
 }
 .pending-request-table .table-action-container {
-  padding: 5px 10px;
+  padding: 5px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -94,23 +94,39 @@
 .pending-request-table .table-action-container .label {
   margin-right: 10px;
 }
-.pending-request-table .table-action-container button {
+.pending-request-table .table-action-container .action-button-container {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.pending-request-table .table-action-container .action-button-container > div {
+  display: flex;
+}
+.pending-request-table .table-action-container .action-button-container button {
   background-color: #84c7c2;
   color: white;
   border: none;
   padding: 7px 15px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
 }
-.pending-request-table .table-action-container button.delete-selected-data {
+.pending-request-table .table-action-container .action-button-container button.delete-selected-data {
   background-color: #e38686;
 }
-.pending-request-table .table-action-container button.unusable {
+.pending-request-table .table-action-container .action-button-container button.unusable {
   background-color: #f5f5f5;
   border: 1px solid #cdcdcd;
   color: inherit;
   cursor: not-allowed;
 }
-
+.pending-request-table .table-action-container .action-button-container button i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.pending-request-table .table-action-container .action-button-container .edit-selected-data {
+  margin-right: 5px;
+}
 .no-data-table-placeholder {
   text-align: center;
   padding: 20px;

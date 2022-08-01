@@ -13,6 +13,20 @@ html, body {
   font-size: 14px;
 }
 
+body.blurred {
+  filter: blur(2px);
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #888;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .body-content {
   display: flex;
   flex-direction: row;
@@ -47,15 +61,6 @@ html, body {
 }
 .left-body.is-on-mobile-width .navigation-toggler {
   display: block;
-}
-.left-body::-webkit-scrollbar {
-  width: 5px;
-}
-.left-body::-webkit-scrollbar-thumb {
-  background: #888;
-}
-.left-body::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 .left-body .navigation-toggler {
   position: absolute;
@@ -577,14 +582,20 @@ html, body {
   margin: 0px 5px;
   font-size: 20px;
 }
-.control-component input, .control-component select {
+.control-component input, .control-component select, .control-component textarea {
   border: none;
   width: initial;
   height: 40px;
   min-width: 300px;
   border: 1px solid #cdcdcd;
-  text-align: center;
   border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.control-component textarea {
+  min-height: 200px;
+  display: block;
+  width: 100%;
 }
 .control-component button {
   height: 40px;
@@ -618,4 +629,56 @@ tr:last-child td:first-child {
 
 tr:last-child td:last-child {
   border-radius: 0px 0px 10px 0px;
+}
+
+.clickable-whole-wrapper {
+  background-color: rgba(191, 217, 233, 0.2705882353);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wide-wrapper {
+  border-radius: 10px;
+  color: #636363;
+  max-height: 80vh;
+  overflow-y: scroll;
+  background-color: white;
+  min-width: 700px;
+  box-shadow: 0px 0px 10px -2px gray;
+}
+.form-wide-wrapper .form-header, .form-wide-wrapper .form-body, .form-wide-wrapper .form-footer {
+  padding: 30px;
+}
+.form-wide-wrapper .form-header {
+  position: relative;
+  padding-bottom: 0;
+}
+.form-wide-wrapper .form-header .title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.form-wide-wrapper .form-header .mini-info {
+  font-size: 13px;
+  color: #a1a1a1;
+}
+.form-wide-wrapper .form-header .form-closer-button {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  padding: 10px 15px;
+  font-size: 30px;
+  line-height: 10px;
+  cursor: pointer;
+}
+.form-wide-wrapper .form-body {
+  padding: 0px 20px;
+}
+.form-wide-wrapper .form-footer {
+  padding-top: 0;
 }/*# sourceMappingURL=main.css.map */
