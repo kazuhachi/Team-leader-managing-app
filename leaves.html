@@ -21,6 +21,7 @@
         <!--  --> <script src="scripts/navigationToggler.js"></script>
         <!--  --> <script src="scripts/notificationPopUp.js"></script>
         <!--  --> <script src="scripts/slidePages.js"></script>
+        <!--  --> <script src="scripts/tab.js"></script>
 
 
         <!-- datepicker -->
@@ -44,6 +45,9 @@
         
 
         <link href="styles/main.css" rel="stylesheet"/>
+        <link href="styles/leaves.css" rel="stylesheet"/>
+
+
     </head>
     <body>
         <div class="body-content">
@@ -164,25 +168,165 @@
                         </div>
                     </div>
                     <div class="content  g-0">
-                        <div class="tab-container" style="display: none;">
-                            <div class="tab-button-container">
-                                <a class="tab-item selected" >
-                                        <div class="icon"></div>
-                                        <div class="lable">View</div>
+                        
+                        <div class="leaves-statistics-container">
+                            <!-- <div class="label">
+                                Leave statistics
+                            </div> -->
+                            <!-- <div id="vacation-emergency-leave-card" class="leave-stat-container stat-card-item">
+                                <div class="remaining-section">
+                                    <div class="label">Remaining <br>Allocated</div>
+                                    <div class="remaining-counter">12</div>
+                                </div>
+                                <div class="used-section">
+                                    <div class="vacation-leave-section sub-section">
+                                        <div class="used-counter-section">  
+                                            <div class="label">Used</div>
+                                            <div class="remaining-counter">2</div>
+                                        </div>
+                                        <div class="leave-type-container">
+                                            <div class="label-leave-type">
+                                                Vacation <br>Leave
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="emergncy-leave-section sub-section">
+                                        <div class="used-counter-section ">  
+                                            <div class="label">Used</div>
+                                            <div class="remaining-counter">1</div>
+                                        </div>
+                                        <div class="leave-type-container">
+                                            <div class="label-leave-type">
+                                                Emergency <br>Leave
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div id="vacation-leave-card" class="leave-stat-container stat-card-item">
+                                <div class="remaining-section">
+                                    <div class="label">Remaining <br>Allocated</div>
+                                    <div class="remaining-counter">12</div>
+                                </div>
+                                <div class=" sub-section">
+                                    <div class="used-counter-section">  
+                                        <div class="label">Used</div>
+                                        <div class="remaining-counter">2</div>
+                                    </div>
+                                    <div class="leave-type-container">
+                                        <div class="label-leave-type">
+                                            Vacation
+                                            <span>Leave</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" sub-section" style="border-left: 2px solid white" >
+                                    <div class="used-counter-section">  
+                                        <div class="label">Used</div>
+                                        <div class="remaining-counter">2</div>
+                                    </div>
+                                    <div class="leave-type-container">
+                                        <div class="label-leave-type">
+                                            Emergency
+                                            <span>Leave</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div id="emergency-leave-card" class="leave-stat-container stat-card-item">
+                                <div class="remaining-section">
+                                    <div class="label">Remaining <br>Allocated</div>
+                                    <div class="remaining-counter">12</div>
+                                </div>
+                                <div class=" sub-section">
+                                    <div class="used-counter-section">  
+                                        <div class="label">Used</div>
+                                        <div class="remaining-counter">2<span> / 7</span></div>
+                                    </div>
+                                    <div class="leave-type-container">
+                                        <div class="label-leave-type">
+                                            Emergency
+                                            <span>Leave</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
                             
-                                </a>
-                                <a href="scheduleManager.html" class="tab-item">
+                            <div id="sick-leave-card" class="leave-stat-container stat-card-item">
+                                <div class="remaining-section">
+                                    <div class="label">Remaining <br>Allocated</div>
+                                    <div class="remaining-counter">12</div>
+                                </div>
+                                <div class=" sub-section">
+                                    <div class="used-counter-section">  
+                                        <div class="label">Used</div>
+                                        <div class="remaining-counter">2</div>
+                                    </div>
+                                    <div class="leave-type-container">
+                                        <div class="label-leave-type">
+                                            Sick
+                                            <span>Leave</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="paternity-leave-card" class="leave-stat-container stat-card-item">
+                                <div class="remaining-section">
+                                    <div class="label">Remaining <br>Allocated</div>
+                                    <div class="remaining-counter">15</div>
+                                </div>
+                                <div class=" sub-section">
+                                    <div class="used-counter-section">  
+                                        <div class="label">Used</div>
+                                        <div class="remaining-counter">0</div>
+                                    </div>
+                                    <div class="leave-type-container">
+                                        <div class="label-leave-type">
+                                            Paternity
+                                            <span>Leave</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="maternity-leave-card" class="leave-stat-container stat-card-item">
+                                <div class="remaining-section">
+                                    <div class="label">Remaining <br>Allocated</div>
+                                    <div class="remaining-counter">15</div>
+                                </div>
+                                <div class=" sub-section">
+                                    <div class="used-counter-section">  
+                                        <div class="label">Used</div>
+                                        <div class="remaining-counter">0</div>
+                                    </div>
+                                    <div class="leave-type-container">
+                                        <div class="label-leave-type">
+                                            Maternity
+                                            <span>Leave</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-container">
+                            <div class="tab-button-container">
+                                <div class="tab-item-button selected" data-tab-target-id="pending-request-content-tab">
+                                        <div class="icon"></div>
+                                        <div class="lable">Pending request</div>
+                            
+                                </div>
+                                <div class="tab-item-button" data-tab-target-id="request-history-content-tab">
                                     <div class="icon"></div>
-                                    <div class="lable">Schedule Manager</div>
+                                    <div class="lable">Request History</div>
                                     
-                                </a>
+                                </div>
                             </div>
                             <div class="tab-content">
-                                <div class="tab-content-item" id="view-schedule">
+                                <div class="tab-content-item" id="pending-request-content-tab">
                                     <!-- <div class="info">
                                         search cretiria
                                     </div> -->
-                                    <div class="control-container">
+                                    <div class="control-container" style="display: none;">
                                         <div class="control-component" control-type="select-calendar">
                                             <div class="label-icon">
                                                 Select week
@@ -208,15 +352,21 @@
                                         <!-- </div> -->
                                     </div>
                                     
-                                    <div class="table-schedule">
-                                        <div class="schedule-header-info">
-                                            <div class="queried-date-container">
-                                                <!-- <span>Schedule : </span> -->
-                                                <span class="queried-date">July 25 - July 31 </span>
+                                    <div class="pending-request-table">
+                                        <div class="table-action-container">
+                                            <div class="label">
+                                                Action :
+                                                
                                             </div>
-                                            <div class="queried-shift-container">
-                                                <!-- <span>Shift : </span> -->
-                                                <span class="queried-date">Morning Shift</span>
+                                            <div class="action-button-container">
+                                                <button class="edit-selected-data ">
+                                                    <i class="fa-regular fa-pen-to-square "></i>
+                                                    Modify
+                                                </button>
+                                                <button class="delete-selected-data unusable">
+                                                    <i class="fa-regular fa-trash-can"></i>
+                                                    Delete
+                                                </button>
                                             </div>
                                         </div>
                                         <table id="example" class="table table-hover table-bordered table-responsive-sm" >
@@ -227,157 +377,61 @@
                                                 </tr> -->
                                                 <tr>
                                                     <th></th>
-                                                    <th>Staff</th>
-                                                    <th><div class="date"><span class="day-of-the-week">Mon</span><span class="date">25</span></div></th>
-                                                    <th><div class="date"><span class="day-of-the-week">Tue</span><span class="date">26</span></div></th>
-                                                    <th><div class="date"><span class="day-of-the-week">Wed</span><span class="date">27</span></div></th>
-                                                    <th><div class="date"><span class="day-of-the-week">Thu</span><span class="date">28</span></div></th>
-                                                    <th><div class="date"><span class="day-of-the-week">Fri</span><span class="date">29</span></div></th>
-                                                    <th><div class="date"><span class="day-of-the-week">Sat</span><span class="date">30</span></div></th>
-                                                    <th><div class="date"><span class="day-of-the-week">Sun</span><span class="date">31</span></div></th>
+                                                    <th>Leave type</th>                                                    
+                                                    <th>Status</th>
+                                                    <th>Date covered</th>
+                                                    <th>No. of date covered</th>
+                                                    <th>Reason</th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="">
+                                            <tbody>
                                                 <tr>
-                                                    <th>1</th>
-                                                    <th>
-                                                        <span class="picture">
-                                                            <!-- <img src="images/ppPlaceholder.png">  -->
-                                                            Mark Vincent
-                                                        </span>
-                                                    </th>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td><span class="leave day-off">Day off</span></td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
+                                                    <td class="checkbox-container"><input type="checkbox"/></td>
+                                                    <td>Vacation Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="pending-status">pending</div>
+                                                    </td>
+                                                    <td>July 22, 2022 - July 23, 2022</td>
+                                                    <td>2</td>
+                                                    <td>Vacation, chil chil and relax</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>2</th>
-                                                    <th>
-                                                        <span class="picture">
-                                                            <!-- <img src="images/pp2.jpeg">  -->
-                                                            CJ
-                                                        </span>
-                                                    </th>
-                                                    <td>6am - 2pm</td>
-                                                    <td><span class="leave day-off">Day off</span></td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
+                                                    <td class="checkbox-container"><input type="checkbox"/></td>
+                                                    <td>Emergency Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="pending-status">pending</div>
+                                                    </td>
+                                                    <td>July 21, 2022 - July 21, 2022</td>
+                                                    <td>1</td>
+                                                    <td>Vacation, chil chil and relax</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>3</th>
-                                                    <th>
-                                                        <span class="picture">
-                                                            <!-- <img src="images/pp3.jpeg">  -->
-                                                            Zoren
-                                                        </span>
-                                                    </th>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td><span class="leave day-off">Day off</span></td>
-                                                    <td>6am - 2pm</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>4</th>
-                                                    <th>
-                                                        <span class="picture">
-                                                            <!-- <img src="images/pp4.jpeg">  -->
-                                                            Vergel
-                                                        </span>
-                                                    </th>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td><span class="leave day-off">Day off</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>5</th>
-                                                    <th>
-                                                        <span class="picture">
-                                                            <!-- <img src="images/pp5.jpeg">  -->
-                                                            Princess
-                                                        </span>
-                                                    </th>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td><span class="leave day-off">Day off</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>6</th>
-                                                    <th>
-                                                        <span class="picture">
-                                                            <!-- <img src="images/pp6.jpeg">  -->
-                                                            Louie
-                                                        </span>
-                                                    </th>
-                                                    <td><span class="leave sick-leave">Sick leave</span></td>
-                                                    <td><span class="leave sick-leave">Sick leave</span></td>
-                                                    <td><span class="leave sick-leave">Sick leave</span></td>
-                                                    <td>6am - 2pm</td>
-                                                    <td><span class="leave day-off">Day off</span></td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>7</th>
-                                                    <th>
-                                                        <span class="picture">
-                                                            <!-- <img src="images/pp7.jpeg">  -->
-                                                            John Patrick
-                                                        </span>
-                                                    </th>
-                                                    <td><span class="leave day-off">Day off</span></td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>8</th>
-                                                    <th>
-                                                        <span class="picture">
-                                                            <!-- <img src="images/pp8.jpeg">  -->
-                                                            Lawiza
-                                                        </span>
-                                                    </th>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td><span class="leave day-off">Day off</span></td>
-                                                    <td>6am - 2pm</td>
-                                                    <td>6am - 2pm</td>
-                                                    <td><span class="leave absent">Absent</span></td>
-                                                    <td>6am - 2pm</td>
+                                                    <td class="checkbox-container"><input type="checkbox"/></td>
+                                                    <td>Sick Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="pending-status">pending</div>
+                                                    </td>
+                                                    <td>July 19, 2022 - July 20, 2022</td>
+                                                    <td>2</td>
+                                                    <td>Vacation, chil chil and relax</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+
+                                        <!-- if no data available -->
+                                        
+                                    </div>
+                                    <div class="no-data-table-placeholder">
+                                        No pending request.
                                     </div>
                                     
                                 </div>
-                                <div class="tab-content-item" id="schedule-manager">
+                                <div class="tab-content-item" id="request-history-content-tab">
                                     
                                 </div>
                                 
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>

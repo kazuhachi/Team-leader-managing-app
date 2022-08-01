@@ -21,6 +21,7 @@
         <!--  --> <script src="scripts/navigationToggler.js"></script>
         <!--  --> <script src="scripts/notificationPopUp.js"></script>
         <!--  --> <script src="scripts/slidePages.js"></script>
+        <!--  --> <script src="scripts/tab.js"></script>
 
 
         <!-- datepicker -->
@@ -166,16 +167,16 @@
                     <div class="content  g-0">
                         <div class="tab-container">
                             <div class="tab-button-container">
-                                <a class="tab-item selected" >
+                                <div class="tab-item-button selected" data-tab-target-id="view-schedule">
                                         <div class="icon"></div>
                                         <div class="lable">View</div>
                             
-                                </a>
-                                <a href="scheduleManager.html" class="tab-item">
+                                </div>
+                                <div href="scheduleManager.html" class="tab-item-button" data-tab-target-id="schedule-manager">
                                     <div class="icon"></div>
                                     <div class="lable">Schedule Manager</div>
                                     
-                                </a>
+                                </div>
                             </div>
                             <div class="tab-content">
                                 <div class="tab-content-item" id="view-schedule">
@@ -386,7 +387,7 @@
                                     
                                 </div>
                                 <div class="tab-content-item" id="schedule-manager">
-                                    
+                                    schedule-manager
                                 </div>
                                 
                             </div>

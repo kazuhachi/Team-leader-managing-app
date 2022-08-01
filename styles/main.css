@@ -430,7 +430,7 @@ html, body {
   padding: 0px 40px;
   width: 100%;
 }
-.right-body .main-content-container .tab-container .tab-button-container .tab-item {
+.right-body .main-content-container .tab-container .tab-button-container .tab-item-button {
   transform: translateY(1px);
   padding: 10px 20px;
   cursor: pointer;
@@ -442,7 +442,7 @@ html, body {
   border: none;
   margin-right: 10px;
 }
-.right-body .main-content-container .tab-container .tab-button-container .tab-item.selected {
+.right-body .main-content-container .tab-container .tab-button-container .tab-item-button.selected {
   border-bottom: 4px solid #7575c5;
   font-weight: bold;
 }
@@ -491,18 +491,6 @@ html, body {
 .right-body .main-content-container .tab-container .tab-content .table-schedule thead th {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-.right-body .main-content-container .tab-container .tab-content .table-schedule tr:first-child th:first-child {
-  border-radius: 10px 0px 0px 0px;
-}
-.right-body .main-content-container .tab-container .tab-content .table-schedule tr:first-child th:last-child {
-  border-radius: 0px 10px 0px 0px;
-}
-.right-body .main-content-container .tab-container .tab-content .table-schedule tr:last-child td:first-child {
-  border-radius: 0px 0px 0px 10px;
-}
-.right-body .main-content-container .tab-container .tab-content .table-schedule tr:last-child td:last-child {
-  border-radius: 0px 0px 10px 0px;
 }
 .right-body .main-content-container .tab-container .tab-content .table-schedule th:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule td:nth-child(4) {
   background-color: rgba(46, 46, 145, 0.0901960784);
@@ -614,4 +602,20 @@ html, body {
   height: 100%;
   width: 100%;
   z-index: 1;
+}
+
+tr:first-child th:first-child {
+  border-radius: 10px 0px 0px 0px;
+}
+
+tr:first-child th:last-child {
+  border-radius: 0px 10px 0px 0px;
+}
+
+tr:last-child td:first-child {
+  border-radius: 0px 0px 0px 10px;
+}
+
+tr:last-child td:last-child {
+  border-radius: 0px 0px 10px 0px;
 }/*# sourceMappingURL=main.css.map */
