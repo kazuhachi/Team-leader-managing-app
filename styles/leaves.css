@@ -147,4 +147,66 @@
   border: 8px dashed #cdcdcd;
   border-radius: 10px 10px 10px 10px;
   box-sizing: border-box;
+}
+
+.preview-container {
+  border: 1px solid #cdcdcd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #4fab74;
+  bottom: -1000;
+  left: 30px;
+  right: 30px;
+  padding: 20px 30px;
+  border-radius: 20px 20px 0px 0px;
+  position: absolute;
+  color: white;
+}
+.preview-container .title {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+.preview-container .preview-item-container {
+  padding-left: 20px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.preview-container .preview-item-container .label {
+  font-weight: bold;
+}
+.preview-container .preview-item {
+  display: grid;
+  grid-template-columns: 130px auto;
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.preview-container .preview-item .label {
+  grid-area: 1/1/2/2;
+}
+.preview-container .preview-item .value {
+  grid-area: 1/2/2/3;
+}
+.preview-container .component-container {
+  display: flex;
+  gap: 10px;
+}
+.preview-container .control-component .confirm-request {
+  background-color: white;
+  color: green;
+}
+.preview-container .control-component .go-back {
+  background-color: white;
+  color: gray;
+}
+
+.control-component .next-button, .control-component .clear-form-buttom {
+  border: 1px solid #cdcdcd;
+  background-color: transparent;
+  color: inherit;
+}
+.control-component i {
+  margin-left: 5px;
 }/*# sourceMappingURL=leaves.css.map */

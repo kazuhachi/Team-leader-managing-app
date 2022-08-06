@@ -11,60 +11,111 @@
                 </div>
             </div>
             <div class="form-body">
-                <div class="control-component" control-type="select-calendar">
-                    <div class="label-icon">
-                        Leave type
-                    
+                <div class="control-component-container">
+                    <div class="control-component" control-type="select-calendar">
+                        <div class="label-icon">
+                            Leave type
+                        
+                        </div>
+                        <select>
+                            <option></option>
+                            <option value="Vacation">Vacation leave</option>
+                            <option value="Emergency">Emergency leave</option>
+                            <option value="Sick">Sick leave</option>
+                            <option value="Paternity">Paternity leave</option>
+                            <option value="Maternity">Maternity leave</option>=
+                        </select>
                     </div>
-                    <select>
-                        <option></option>
-                        <option value="Vacation">Vacation leave</option>
-                        <option value="Emergency">Emergency leave</option>
-                        <option value="Sick">Sick leave</option>
-                        <option value="Paternity">Paternity leave</option>
-                        <option value="Maternity">Maternity leave</option>=
-                    </select>
-                </div>
-                <div class="control-component" control-type="select-calendar">
-                    <div class="label-icon">
-                        Select date
+                    <div class="control-component" control-type="select-calendar">
+                        <div class="label-icon">
+                            Select date
+                        </div>
+                        <input type="text" class="input-date-range-picker">
                     </div>
-                    <input type="text" class="input-date-range-picker">
-                </div>
-                <br>
-                <div class="control-component" control-type="select-calendar">
-                    <div class="label-icon">
-                        Day off
+                    <div class="control-component" control-type="select-calendar">
+                        <div class="label-icon">
+                            Day off
+                        </div>
+                        <select>
+                            <option></option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
                     </div>
-                    <select>
-                        <option></option>
-                        <option value="Monday">Monday</option>
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Wednesday">Wednesday</option>
-                        <option value="Thursday">Thursday</option>
-                        <option value="Friday">Friday</option>
-                        <option value="Saturday">Saturday</option>
-                        <option value="Sunday">Sunday</option>
-                    </select>
-                </div>
-                <div class="control-component" control-type="select-calendar">
-                    <div class="label-icon">
-                        Reason
+                    <div class="control-component" control-type="select-calendar">
+                        <div class="label-icon">
+                            Reason
+                        </div>
+                        <textarea></textarea>
                     </div>
-                    <textarea></textarea>
+                    <div class="control-component" control-type="select-calendar">
+                        <div class="label-icon">
+                            Remarks
+                        </div>
+                        <textarea></textarea>
+                    </div>
                 </div>
+                
             </div>
             <div class="form-footer">
                 <hr>
                 <div class="control-component" control-type="select-calendar">
-                    <button>
-                        Submit
+                    <button class="clear-form-buttom">
+                        Clear
                     </button>
                 </div>
                 <div class="control-component" control-type="select-calendar">
-                    <button>
-                        Clear
+                    <button class="next-button">
+                        Next <i class="fa-solid fa-angle-right"></i>
                     </button>
+                </div>
+            </div>
+            <div class="preview-container">
+                <div class="title">Preview</div>
+                <div class="preview-item-container">
+                    <div class="preview-item">
+                        <div class="label">Leave type </div>
+                        <div class="value">Vacation leave</div>
+                    </div>
+                    <div class="preview-item">
+                        <div class="label">Selected date </div>
+                        <div class="value">July 20, 2022 - July 22, 2022</div>
+                    </div>
+                    <div class="preview-item">
+                        <div class="label">Day off</div>
+                        <div class="value">Thursday</div>
+                    </div>
+                    <div class="preview-item">
+                        <div class="label">Number of days </div>
+                        <div class="value">2</div>
+                    </div>
+                    <div class="preview-item">
+                        <div class="label">Reason </div>
+                        <div class="value">Vacation, chil chil and relax</div>
+                    </div>
+                    <div class="preview-item">
+                        <div class="label">Remarks </div>
+                        <div class="value"></div>
+                    </div>
+                </div>
+                
+                <hr>
+                <div class="component-container">
+                    <div class="control-component" control-type="select-calendar">
+                        <button class="go-back">
+                            Go back 
+                        </button>
+                    </div>
+                    <div class="control-component" control-type="select-calendar">
+                        <button class="confirm-request">
+                            Comfirm request <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

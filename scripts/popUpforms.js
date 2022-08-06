@@ -1,4 +1,9 @@
+
+
 $(document).ready(function(){
+
+
+
     $(".add-request-leave").on("click", function(){
         $(".popper-forms-container").load("/subHTMLs/popUpForms.html");
     })
@@ -14,5 +19,29 @@ $(document).ready(function(){
         
     } )
     
+    // next button click
+    $(".popper-forms-container").on("click", ".next-button", function(){
+        let previewContainer = $("body .preview-container");
+        anime({
+            targets: ".preview-container",
+            //css
+            bottom: 0,
+            easing: 'easeInOutQuart',
+            duration: 500
+            
+        })
+    }).on("click", ".go-back", function(){
+        let previewContainer = $("body .preview-container");
+        anime({
+            targets: ".preview-container",
+            //css
+            bottom: -1000,
+            easing: 'easeInOutQuart',
+            duration: 500
+            
+        });
+    })
     
 })
+
+// .daterangepicker 
