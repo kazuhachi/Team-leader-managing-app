@@ -32,7 +32,7 @@
                 flex-direction: row;
                 padding: 15px;
 
-                &.vacation-leave-section,{
+                &.vacation-leave-section{
                     border-bottom: 2px solid white;
                     
                 }
@@ -189,86 +189,104 @@
 }
 
 
-    .preview-container{
-        border: 1px solid #cdcdcd;
-        padding: 20px;
-        border-radius: 10px;
-        
-        background-color: #4fab74;
-        bottom: -1000;
-        left: 30px;
-        right: 30px;
-        padding: 20px 30px;
-        border-radius: 20px 20px 0px 0px;
-        position: absolute;
-        color: white;
+.request-statistics{
+    background-color: #b5962a;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 10px;
+    display: none;
+    gap: 30px;
+    justify-content: space-between;
 
-        .title{
-            font-size: 17px;
-            font-weight: bold;
-            padding: 10px 0px;
-        }
-        .preview-item-container{
-            padding-left: 20px;
-            display: flex;
-            gap: 5px;
-            flex-direction: column;
-
-            .label{
-                font-weight: bold;
-            }
-        }
-        .preview-item{
-            display: grid;
-            grid-template-columns: 130px  auto;
-            grid-template-rows: auto;
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-
-            .label{
-                grid-area: 1 / 1 / 2 / 2;
-            }
-
-            .value{
-                grid-area: 1 / 2 / 2 / 3; 
-            }
-
-            
-        }
-        .component-container{
-            display: flex;
-            gap: 10px;
-        }
-
-        .control-component{
-            .confirm-request{
-                background-color: white;
-                color: green;
-                
-            }
-            .go-back{
-                background-color: white;
-                color: gray;
-            }
-        }
+    .stat-item{
+        display: flex;
+        gap: 10px;
     }
 
     
+}
 
-    .control-component{
-        .next-button, .clear-form-buttom{
-            border: 1px solid #cdcdcd;
-            background-color: transparent;
-            color: inherit;
+.preview-container{
+    border: 1px solid #cdcdcd;
+    padding: 20px;
+    border-radius: 10px;
+    
+    background-color: #4fab74;
+    bottom: -1000;
+    left: 30px;
+    right: 30px;
+    padding: 20px 30px;
+    border-radius: 20px 20px 0px 0px;
+    position: absolute;
+    color: white;
 
-            
+    .title{
+        font-size: 17px;
+        font-weight: bold;
+        padding: 10px 0px;
+    }
+    .preview-item-container{
+        padding-left: 20px;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+
+        .label{
+            font-weight: bold;
+        }
+    }
+    .preview-item{
+        display: grid;
+        grid-template-columns: 130px  auto;
+        grid-template-rows: auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        .label{
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .value{
+            grid-area: 1 / 2 / 2 / 3; 
         }
 
         
-        i{
-            margin-left: 5px;
-        }
-        .clear-form-buttom{
+    }
+    .component-container{
+        display: flex;
+        gap: 10px;
+    }
 
+    .control-component{
+        .confirm-request{
+            background-color: white;
+            color: green;
+            
+        }
+        .go-back{
+            background-color: white;
+            color: gray;
         }
     }
+}
+
+
+
+.control-component{
+    .next-button, .clear-form-buttom{
+        border: 1px solid #cdcdcd;
+        background-color: transparent;
+        color: inherit;
+
+        
+    }
+
+    
+    i{
+        margin-left: 5px;
+    }
+    .clear-form-buttom{
+
+    }
+}
