@@ -22,26 +22,14 @@ $(document).ready(function(){
     // next button click
     $(".popper-forms-container").on("click", ".next-button", function(){
         let previewContainer = $("body .preview-container");
-        anime({
-            targets: ".preview-container",
-            //css
-            bottom: 0,
-            easing: 'easeInOutQuart',
-            duration: 500
-            
+        previewContainer.animate({
+            bottom : 0
         })
     }).on("click", ".go-back", function(){
         let previewContainer = $("body .preview-container");
-        anime({
-            targets: ".preview-container",
-            //css
-            bottom: -1000,
-            easing: 'easeInOutQuart',
-            duration: 500
-            
-        });
+        previewContainer.animate({
+            bottom : '-1000px'
+        })
     })
     
 })
-
-// .daterangepicker 
