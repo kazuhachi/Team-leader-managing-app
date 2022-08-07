@@ -854,10 +854,15 @@ tr:last-child td:last-child{
     border-radius: 10px;
     color: #636363;
     max-height: 80vh;
-    overflow-y: scroll;
     background-color: white;
     box-shadow: 0px 0px 10px -2px gray;
-    position: fixed;
+    position: relative;
+    overflow-y: hidden;
+
+    .form-container{
+        max-height: 80vh;
+        overflow-y: scroll;
+    }
     
     
     .form-header, .form-body, .form-footer{
