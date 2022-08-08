@@ -24,28 +24,30 @@ $(document).ready(function(){
 
         
             
-        $(".popper-forms-container").find(".request-statistics").css({
-            display : 'flex',
-            opacity : '0',
-            transform : 'translateY(-50px)'
-        }).animate({
+        // $(".popper-forms-container").find(".request-statistics").css({
+        //     display : 'flex',
+        //     opacity : '0',
+        //     transform : 'translateY(-50px)'
+        // }).animate({
             
-            transform : 'translateY(0px)',
-            opacity : '1'
-        })
+        //     transform : 'translateY(0px)',
+        //     opacity : '1'
+        // })
+
+
+        $(".popper-forms-container").find(".request-statistics").addClass("fade-in")
     })
         
     // next button click
     $(".popper-forms-container").on("click", ".next-button", function(){
         let previewContainer = $("body .preview-container");
-        previewContainer.animate({
-            bottom : 0
-        })
+        // previewContainer.animate({
+        //     bottom : 0
+        // })
+        previewContainer.removeClass("slideDownPopUp").addClass("slideUpPopUp")
     }).on("click", ".go-back", function(){
         let previewContainer = $("body .preview-container");
-        previewContainer.animate({
-            bottom : '-1000px'
-        })
+        previewContainer.removeClass("slideUpPopUp").addClass("slideDownPopUp")
     })
 
 

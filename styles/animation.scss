@@ -1,0 +1,57 @@
+.fade-in{
+    
+
+    &.request-statistics{
+        opacity: 0;
+        height: auto;
+        padding: 10px 20px;
+        animation: fadeIn 500ms forwards;
+    }
+}
+
+@for $i from 1 through 10 {
+    .leaves-statistics-container .leave-stat-container:nth-child(#{$i}n) {
+        opacity: 0;
+        animation: fadeIn 500ms forwards;
+        animation-delay: #{$i * 200}ms;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        height: auto;
+        opacity: 1 ;
+        transform: translateY(0);
+    }
+}
+
+.slideUpPopUp{
+    animation : slideUpPopUp 500ms forwards
+}
+
+@keyframes slideUpPopUp{
+    from {
+        bottom : -1000px
+    }
+    to {
+        bottom : 0
+    }
+}
+
+.slideDownPopUp{
+    animation : slideDownPopUp 500ms forwards
+}
+@keyframes slideDownPopUp{
+    from {
+        bottom : 0
+    }
+    to {
+        bottom : -1000px
+    }
+}

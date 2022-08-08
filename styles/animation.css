@@ -1,0 +1,155 @@
+.fade-in.request-statistics {
+  opacity: 0;
+  height: auto;
+  padding: 10px 20px;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(1n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(2n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(3n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(4n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(5n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(6n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(7n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(8n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(9n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+}
+
+.leaves-statistics-container .leave-stat-container:nth-child(10n) {
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slideUpPopUp {
+  -webkit-animation: slideUpPopUp 500ms forwards;
+          animation: slideUpPopUp 500ms forwards;
+}
+
+@-webkit-keyframes slideUpPopUp {
+  from {
+    bottom: -1000px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes slideUpPopUp {
+  from {
+    bottom: -1000px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+.slideDownPopUp {
+  -webkit-animation: slideDownPopUp 500ms forwards;
+          animation: slideDownPopUp 500ms forwards;
+}
+
+@-webkit-keyframes slideDownPopUp {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -1000px;
+  }
+}
+
+@keyframes slideDownPopUp {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -1000px;
+  }
+}/*# sourceMappingURL=animation.css.map */
