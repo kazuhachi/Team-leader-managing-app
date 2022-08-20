@@ -425,17 +425,18 @@ body.blurred {
   font-size: 13px;
   color: #a7a7a7;
 }
-.right-body .main-content-container .tab-container {
+.right-body .main-content-container .leave-data-container, .right-body .main-content-container .tab-container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
-.right-body .main-content-container .tab-container .tab-button-container {
+.right-body .main-content-container .leave-data-container .tab-button-container, .right-body .main-content-container .tab-container .tab-button-container {
   display: flex;
   flex-direction: row;
   padding: 0px 40px;
   width: 100%;
 }
-.right-body .main-content-container .tab-container .tab-button-container .tab-item-button {
+.right-body .main-content-container .leave-data-container .tab-button-container .tab-item-button, .right-body .main-content-container .tab-container .tab-button-container .tab-item-button {
   transform: translateY(1px);
   padding: 10px 20px;
   cursor: pointer;
@@ -447,26 +448,26 @@ body.blurred {
   border: none;
   margin-right: 10px;
 }
-.right-body .main-content-container .tab-container .tab-button-container .tab-item-button.selected {
+.right-body .main-content-container .leave-data-container .tab-button-container .tab-item-button.selected, .right-body .main-content-container .tab-container .tab-button-container .tab-item-button.selected {
   border-bottom: 4px solid #7575c5;
   font-weight: bold;
 }
-.right-body .main-content-container .tab-container .tab-content {
+.right-body .main-content-container .leave-data-container .tab-content, .right-body .main-content-container .tab-container .tab-content {
   padding: 10px;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule, .right-body .main-content-container .tab-container .tab-content .table-schedule {
   font-size: 14px;
   padding: 30px;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule .criteria-result-container {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule .criteria-result-container, .right-body .main-content-container .tab-container .tab-content .table-schedule .criteria-result-container {
   display: flex;
   padding: 10px 5px;
   flex-direction: column;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule .criteria-result-container .criteria-item-container {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule .criteria-result-container .criteria-item-container, .right-body .main-content-container .tab-container .tab-content .table-schedule .criteria-result-container .criteria-item-container {
   padding-top: 5px;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule .criteria-result-container .criteria-item-container .criteria-item {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule .criteria-result-container .criteria-item-container .criteria-item, .right-body .main-content-container .tab-container .tab-content .table-schedule .criteria-result-container .criteria-item-container .criteria-item {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 10px;
@@ -474,73 +475,73 @@ body.blurred {
   background-color: #8d7fbd;
   color: white;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule table {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule table, .right-body .main-content-container .tab-container .tab-content .table-schedule table {
   color: #636363;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule td {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule td, .right-body .main-content-container .tab-container .tab-content .table-schedule td {
   padding: 5px;
   vertical-align: middle;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule th span.picture img {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule th span.picture img, .right-body .main-content-container .tab-container .tab-content .table-schedule th span.picture img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   margin-right: 10px;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule th div.date .day-of-the-week {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule th div.date .day-of-the-week, .right-body .main-content-container .tab-container .tab-content .table-schedule th div.date .day-of-the-week {
   margin-right: 10px;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule th div.date > div {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule th div.date > div, .right-body .main-content-container .tab-container .tab-content .table-schedule th div.date > div {
   display: block;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule thead th {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule thead th, .right-body .main-content-container .tab-container .tab-content .table-schedule thead th {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule th:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule td:nth-child(4) {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule th:nth-child(4), .right-body .main-content-container .leave-data-container .tab-content .table-schedule td:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule th:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule td:nth-child(4) {
   background-color: rgba(46, 46, 145, 0.0901960784);
   border-left: 2px solid #673ab7;
   border-right: 2px solid #673ab7;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule th:nth-child(4) {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule th:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule th:nth-child(4) {
   border-radius: 5px 5px 0px 0px;
   border-top: 2px solid #673ab7;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule tr:last-child td:nth-child(4) {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule tr:last-child td:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule tr:last-child td:nth-child(4) {
   border-bottom: 2px solid #673ab7;
   border-radius: 0px 0px 5px 5px;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.leave {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.leave, .right-body .main-content-container .tab-container .tab-content .table-schedule span.leave {
   padding: 10px 10px;
   border-radius: 10px;
   color: white;
   display: inline-block;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.day-off {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.day-off, .right-body .main-content-container .tab-container .tab-content .table-schedule span.day-off {
   background-color: green;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.vacation-leave {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.vacation-leave, .right-body .main-content-container .tab-container .tab-content .table-schedule span.vacation-leave {
   background-color: green;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.sick-leave {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.sick-leave, .right-body .main-content-container .tab-container .tab-content .table-schedule span.sick-leave {
   background-color: rgba(36, 87, 114, 0.7294117647);
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.absent {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.absent, .right-body .main-content-container .tab-container .tab-content .table-schedule span.absent {
   background-color: #df3f3f;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.emergency-leave {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.emergency-leave, .right-body .main-content-container .tab-container .tab-content .table-schedule span.emergency-leave {
   background-color: green;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.off-set {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.off-set, .right-body .main-content-container .tab-container .tab-content .table-schedule span.off-set {
   background-color: green;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.emergency-leave {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.emergency-leave, .right-body .main-content-container .tab-container .tab-content .table-schedule span.emergency-leave {
   background-color: green;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule span.compationate-leave {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule span.compationate-leave, .right-body .main-content-container .tab-container .tab-content .table-schedule span.compationate-leave {
   background-color: green;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule .schedule-header-info {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule .schedule-header-info, .right-body .main-content-container .tab-container .tab-content .table-schedule .schedule-header-info {
   font-size: 20px;
   padding: 20px;
   font-weight: bold;
@@ -548,7 +549,7 @@ body.blurred {
   color: white;
   border-radius: 10px 10px 0px 0px;
 }
-.right-body .main-content-container .tab-container .tab-content .table-schedule .schedule-header-info > div {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule .schedule-header-info > div, .right-body .main-content-container .tab-container .tab-content .table-schedule .schedule-header-info > div {
   display: inline-block;
   margin-right: 20px;
 }

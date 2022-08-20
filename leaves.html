@@ -179,40 +179,10 @@
                     <div class="content  g-0">
                         
                         <div class="leaves-statistics-container">
-                            <!-- <div class="label">
+                           
+                            <div class="title">
                                 Leave statistics
-                            </div> -->
-                            <!-- <div id="vacation-emergency-leave-card" class="leave-stat-container stat-card-item">
-                                <div class="remaining-section">
-                                    <div class="label">Remaining <br>Allocated</div>
-                                    <div class="remaining-counter">12</div>
-                                </div>
-                                <div class="used-section">
-                                    <div class="vacation-leave-section sub-section">
-                                        <div class="used-counter-section">  
-                                            <div class="label">Used</div>
-                                            <div class="remaining-counter">2</div>
-                                        </div>
-                                        <div class="leave-type-container">
-                                            <div class="label-leave-type">
-                                                Vacation <br>Leave
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="emergncy-leave-section sub-section">
-                                        <div class="used-counter-section ">  
-                                            <div class="label">Used</div>
-                                            <div class="remaining-counter">1</div>
-                                        </div>
-                                        <div class="leave-type-container">
-                                            <div class="label-leave-type">
-                                                Emergency <br>Leave
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div> -->
+                            </div>
                             <div id="vacation-leave-card" class="leave-stat-container stat-card-item">
                                 <div class="remaining-section">
                                     <div class="label">Remaining <br>Allocated</div>
@@ -230,7 +200,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class=" sub-section" style="border-left: 2px solid white" >
+                            </div>
+                            <div id="emegency-leave-card" class="leave-stat-container stat-card-item">
+                                <div class="remaining-section">
+                                    <div class="label">Remaining <br>Allocated</div>
+                                    <div class="remaining-counter">12</div>
+                                </div>
+                                <div class=" sub-section">
                                     <div class="used-counter-section">  
                                         <div class="label">Used</div>
                                         <div class="remaining-counter">2</div>
@@ -243,24 +219,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div id="emergency-leave-card" class="leave-stat-container stat-card-item">
-                                <div class="remaining-section">
-                                    <div class="label">Remaining <br>Allocated</div>
-                                    <div class="remaining-counter">12</div>
-                                </div>
-                                <div class=" sub-section">
-                                    <div class="used-counter-section">  
-                                        <div class="label">Used</div>
-                                        <div class="remaining-counter">2<span> / 7</span></div>
-                                    </div>
-                                    <div class="leave-type-container">
-                                        <div class="label-leave-type">
-                                            Emergency
-                                            <span>Leave</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                             
                             <div id="sick-leave-card" class="leave-stat-container stat-card-item">
                                 <div class="remaining-section">
@@ -317,8 +275,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-container">
-                            <div class="tab-button-container">
+                        <div class="leave-data-container">
+                            <!-- <div class="tab-button-container">
                                 <div class="tab-item-button selected" data-tab-target-id="pending-request-content-tab">
                                         <div class="icon"></div>
                                         <div class="lable">Pending request</div>
@@ -329,7 +287,8 @@
                                     <div class="lable">Request History</div>
                                     
                                 </div>
-                            </div>
+                            </div> -->
+                            
                             <div class="tab-content">
                                 <div class="tab-content-item" id="pending-request-content-tab">
                                     <!-- <div class="info">
@@ -362,6 +321,7 @@
                                     </div>
                                     
                                     <div class="pending-request-table">
+                                        <div class="title">Pending request</div>
                                         <div class="table-action-container">
                                             
                                             <div class="action-button-container">
@@ -383,7 +343,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <table id="example" class="table table-hover table-bordered table-responsive-sm" >
+                                        <table id="pendiing-request-tale" class="table table-hover table-bordered table-responsive-sm" >
                                             <thead>
                                                 <!-- <tr>
                                                     <td colspan="2"></td>
@@ -435,6 +395,120 @@
                                         <!-- if no data available -->
                                         
                                     </div>
+                                    <div class="pending-request-table">
+                                        <div class="title">Approved request</div>
+                                        <!-- <div class="table-action-container">
+                                            
+                                            <div class="action-button-container">
+                                                <div class="left-button-containers">
+                                                    <button class="edit-selected-data unusable">
+                                                        <i class="fa-regular fa-pen-to-square "></i>
+                                                        Modify
+                                                    </button>
+                                                    <button class="delete-selected-data unusable">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                                <div class="right-button-containers">
+                                                    <button class="add-request-leave">
+                                                        <i class="fa-regular fa-calendar-plus"></i>
+                                                        Request a leave
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <table id="approved-request-table" class="table table-hover table-bordered table-responsive-sm" >
+                                            <thead>
+                                                <!-- <tr>
+                                                    <td colspan="2"></td>
+                                                    <th colspan="9" style="text-align: center">SCHEDULE</th>
+                                                </tr> -->
+                                                <tr>
+                                                    <th>Leave type</th>                                                    
+                                                    <th>Status</th>
+                                                    <th>Date covered</th>
+                                                    <th>No. of date covered</th>
+                                                    <th>Reason</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    
+                                                    <td>Vacation Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="approved-status">Approved</div>
+                                                    </td>
+                                                    <td>July 22, 2022 - July 23, 2022</td>
+                                                    <td>2</td>
+                                                    <td>Vacation, chil chil and relax</td>
+                                                </tr>
+                                                <tr>
+                                                    
+                                                    <td>Emergency Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="approved-status">Approved</div>
+                                                    </td>
+                                                    <td>July 21, 2022 - July 21, 2022</td>
+                                                    <td>1</td>
+                                                    <td>Vacation, chil chil and relax</td>
+                                                </tr>
+                                                <tr>
+                                                    
+                                                    <td>Sick Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="approved-status">Approved</div>
+                                                    </td>
+                                                    <td>July 19, 2022 - July 20, 2022</td>
+                                                    <td>2</td>
+                                                    <td>Vacation, chil chil and relax</td>
+                                                </tr>
+                                                <tr>
+                                                    
+                                                    <td>Sick Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="approved-status">Approved</div>
+                                                    </td>
+                                                    <td>July 19, 2022 - July 20, 2022</td>
+                                                    <td>2</td>
+                                                    <td>Vacation, chil chil and relax</td>
+                                                </tr>
+                                                <tr>
+                                                    
+                                                    <td>Sick Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="approved-status">Approved</div>
+                                                    </td>
+                                                    <td>July 19, 2022 - July 20, 2022</td>
+                                                    <td>2</td>
+                                                    <td>Vacation, chil chil and relax</td>
+                                                </tr>
+                                                <tr>
+                                                    
+                                                    <td>Sick Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="approved-status">Approved</div>
+                                                    </td>
+                                                    <td>July 19, 2022 - July 20, 2022</td>
+                                                    <td>2</td>
+                                                    <td>Vacation, chil chil and relax</td>
+                                                </tr>
+                                                <tr>
+                                                    
+                                                    <td>Sick Leave</td>                                                    
+                                                    <td class="status-type">
+                                                       <div class="approved-status">Approved</div>
+                                                    </td>
+                                                    <td>July 19, 2022 - July 20, 2022</td>
+                                                    <td>2</td>
+                                                    <td>Vacation, chil chil and relax</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <!-- if no data available -->
+                                        
+                                    </div>
                                     <div class="no-data-table-placeholder" style="display: none">
                                         No pending request.
                                     </div>
@@ -459,7 +533,7 @@
             // initiate datepicker
             $("body .input-date-range-picker").daterangepicker();
 
-            $('#example').DataTable({
+            $('#pendiing-request-tale, #approved-request-table').DataTable({
                 searching : false,
                 paging :  false,
                 

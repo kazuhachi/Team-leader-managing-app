@@ -1,5 +1,15 @@
 .leaves-statistics-container{
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+    .title{
+        font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #242454  
+    }
+
     .stat-card-item{
         display: inline-flex;
         border-radius: 10px;
@@ -71,6 +81,13 @@
 
 .pending-request-table{
     padding: 30px;
+
+    .title{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #242454
+    }
     
     table{
         border-radius: 10px;
@@ -92,6 +109,15 @@
                         padding: 5px 10px;
                         border-radius: 10px;
                     }
+                    .approved-status{
+                        background-color: #3ea793;
+                        color: white;
+                        display: inline-block;
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                    }
+                    
+
                 }
                 &.checkbox-container{
                     text-align: center;
@@ -290,5 +316,17 @@
     }
     .clear-form-buttom{
 
+    }
+}
+
+
+.main-content-container{
+    .content{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .leaves-statistics-container{
     }
 }

@@ -405,6 +405,7 @@ body.blurred{
     .main-content-container{
         display: flex;
         flex-direction: column;
+        
 
         .navigation-header{
             padding: 20px 30px;
@@ -544,9 +545,10 @@ body.blurred{
 
 
         
-        .tab-container{
+        .leave-data-container, .tab-container{
             display: flex;
             flex-direction: column;
+            flex-grow: 1;
 
             .tab-button-container{
                 display: flex;

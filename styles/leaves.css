@@ -1,5 +1,13 @@
 .leaves-statistics-container {
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.leaves-statistics-container .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #242454;
 }
 .leaves-statistics-container .stat-card-item {
   display: inline-flex;
@@ -61,6 +69,12 @@
 .pending-request-table {
   padding: 30px;
 }
+.pending-request-table .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #242454;
+}
 .pending-request-table table {
   border-radius: 10px;
 }
@@ -72,6 +86,13 @@
 }
 .pending-request-table table tr td.status-type .pending-status {
   background-color: #e1b285;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.pending-request-table table tr td.status-type .approved-status {
+  background-color: #3ea793;
   color: white;
   display: inline-block;
   padding: 5px 10px;
@@ -226,4 +247,9 @@
 }
 .control-component i {
   margin-left: 5px;
+}
+.main-content-container .content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }/*# sourceMappingURL=leaves.css.map */
