@@ -614,7 +614,7 @@ body.blurred{
                         vertical-align: middle
                     }
 
-                    th span.picture img{
+                    td span.picture img{
                         width: 50px;
                         height: 50px;
                         border-radius: 10px;
@@ -645,26 +645,26 @@ body.blurred{
                     // ================================================
                     // active day or today
 
-                    th:nth-child(4), td:nth-child(4){
-                        background-color: #2e2e9117;
-                        border-left: 2px solid  #673ab7;
-                        border-right: 2px solid  #673ab7;
-                        // background-color: blue;
-                    }
-                    th:nth-child(4){
-                        // background-color: #538ec7;
-                        // color: white;
-                        border-radius: 5px 5px 0px 0px;
-                        border-top: 2px solid  #673ab7;
+                    // th:nth-child(4), td:nth-child(4){
+                    //     background-color: #2e2e9117;
+                    //     border-left: 2px solid  #673ab7;
+                    //     border-right: 2px solid  #673ab7;
+                    //     // background-color: blue;
+                    // }
+                    // th:nth-child(4){
+                    //     // background-color: #538ec7;
+                    //     // color: white;
+                    //     border-radius: 5px 5px 0px 0px;
+                    //     border-top: 2px solid  #673ab7;
                         
-                    }
+                    // }
 
-                    tr:last-child{
-                        td:nth-child(4){
-                            border-bottom: 2px solid  #673ab7;
-                            border-radius:  0px 0px 5px 5px;
-                        }
-                    }
+                    // tr:last-child{
+                    //     td:nth-child(4){
+                    //         border-bottom: 2px solid  #673ab7;
+                    //         border-radius:  0px 0px 5px 5px;
+                    //     }
+                    // }
                     // =================================================
                     
                     // tr td:nth-child(1), tr th:nth-child(1){
@@ -716,6 +716,11 @@ body.blurred{
                             margin-right: 20px;
                         }
                     }
+
+                    .staff-td{
+                        padding: 10px;
+                        max-width: 200px;
+                    }
                 }
                 
             }
@@ -724,8 +729,139 @@ body.blurred{
 }
 
 
+.table-schdule{
+    display: flex;
+    flex-direction: column;
+    
+    
+    .table-header{
+        // background-color: #e2e9ef;
+    }
+
+    .table-header, .table-body{
+        
+        .table-row{
+            display: flex;
+            flex-direction: row;
+            & .th-data, .td-data{
+                display: flex;
+                align-items: center;
+                width: 12%;
+                // padding: 10px 10px;
+                border: 1px solid #cdcdcd;
+                border-bottom: none;
+                border-right: none;
+                
+
+                // first column  "workers"
+                &:nth-child(1){
+                    flex-grow: 1;
+                    font-size: 14px;
+                }
+
+                &:last-child{
+                    border-right: 1px solid #cdcdcd;
+                }
+                
+            }
+
+            .th-data{
+                font-size: 14px;
+                padding: 10px 10px;
+                font-weight: bold;
+            }
+
+            .td-data{
+                font-size: 12px;
+
+                &.worker-profile{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px;
+                    font-weight: bold;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 100%;
+                        border: 1px solid #cdcdcd;
+                    }
+                }
+
+                &.work-detail{
+                    padding: 1px;
+                    & > div{
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        
+                        & span{
+                            font-weight: 500;
+                        }
+                    }
+                    & .on-duty{
+                        
+                        padding: 10px 10px;
+                        width: 100%;
+                        border: 1px solid green;
+                        border-radius: 5px;
+                        color: green;
+                        background-color: #f2fff2;
+                    }
+                    & .vacation-leave{
+                        
+                        padding: 10px 10px;
+                        width: 100%;
+                        border: 1px solid purple;
+                        border-radius: 5px;
+                        color: white;
+                        background-color: #9d73a1;
+                    }
+                    & .absent{
+                        
+                        padding: 10px 10px;
+                        width: 100%;
+                        border: 1px solid red;
+                        border-radius: 5px;
+                        color: white;
+                        background-color: #c73c3c;
+                    }
+                    & .offday{
+                        
+                        padding: 10px 10px;
+                        width: 100%;
+                        border: 1px solid green;
+                        border-radius: 5px;
+                        color: white;
+                        background-color:#85c7a4;
+                    }
+                }
+            }
+            
+
+            
+
+            &:last-child{
+                & .td-data{
+                    border-bottom: 1px solid #cdcdcd;
+                }
+            }
+        }
+
+        
+    }
+}
+
+
+
+
+
+
+
+
 .control-container{
-    padding: 30px;
+    padding: 0px 30px;
 
     .control-footer{
         margin-top: 10px;;

@@ -486,7 +486,7 @@ body.blurred {
   padding: 5px;
   vertical-align: middle;
 }
-.right-body .main-content-container .leave-data-container .tab-content .table-schedule th span.picture img, .right-body .main-content-container .tab-container .tab-content .table-schedule th span.picture img {
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule td span.picture img, .right-body .main-content-container .tab-container .tab-content .table-schedule td span.picture img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -501,19 +501,6 @@ body.blurred {
 .right-body .main-content-container .leave-data-container .tab-content .table-schedule thead th, .right-body .main-content-container .tab-container .tab-content .table-schedule thead th {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-.right-body .main-content-container .leave-data-container .tab-content .table-schedule th:nth-child(4), .right-body .main-content-container .leave-data-container .tab-content .table-schedule td:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule th:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule td:nth-child(4) {
-  background-color: rgba(46, 46, 145, 0.0901960784);
-  border-left: 2px solid #673ab7;
-  border-right: 2px solid #673ab7;
-}
-.right-body .main-content-container .leave-data-container .tab-content .table-schedule th:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule th:nth-child(4) {
-  border-radius: 5px 5px 0px 0px;
-  border-top: 2px solid #673ab7;
-}
-.right-body .main-content-container .leave-data-container .tab-content .table-schedule tr:last-child td:nth-child(4), .right-body .main-content-container .tab-container .tab-content .table-schedule tr:last-child td:nth-child(4) {
-  border-bottom: 2px solid #673ab7;
-  border-radius: 0px 0px 5px 5px;
 }
 .right-body .main-content-container .leave-data-container .tab-content .table-schedule span.leave, .right-body .main-content-container .tab-container .tab-content .table-schedule span.leave {
   padding: 10px 10px;
@@ -557,9 +544,105 @@ body.blurred {
   display: inline-block;
   margin-right: 20px;
 }
+.right-body .main-content-container .leave-data-container .tab-content .table-schedule .staff-td, .right-body .main-content-container .tab-container .tab-content .table-schedule .staff-td {
+  padding: 10px;
+  max-width: 200px;
+}
+
+.table-schdule {
+  display: flex;
+  flex-direction: column;
+}
+.table-schdule .table-header .table-row, .table-schdule .table-body .table-row {
+  display: flex;
+  flex-direction: row;
+}
+.table-schdule .table-header .table-row .th-data, .table-schdule .table-header .table-row .td-data, .table-schdule .table-body .table-row .th-data, .table-schdule .table-body .table-row .td-data {
+  display: flex;
+  align-items: center;
+  width: 12%;
+  border: 1px solid #cdcdcd;
+  border-bottom: none;
+  border-right: none;
+}
+.table-schdule .table-header .table-row .th-data:nth-child(1), .table-schdule .table-header .table-row .td-data:nth-child(1), .table-schdule .table-body .table-row .th-data:nth-child(1), .table-schdule .table-body .table-row .td-data:nth-child(1) {
+  flex-grow: 1;
+  font-size: 14px;
+}
+.table-schdule .table-header .table-row .th-data:last-child, .table-schdule .table-header .table-row .td-data:last-child, .table-schdule .table-body .table-row .th-data:last-child, .table-schdule .table-body .table-row .td-data:last-child {
+  border-right: 1px solid #cdcdcd;
+}
+.table-schdule .table-header .table-row .th-data, .table-schdule .table-body .table-row .th-data {
+  font-size: 14px;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+.table-schdule .table-header .table-row .td-data, .table-schdule .table-body .table-row .td-data {
+  font-size: 12px;
+}
+.table-schdule .table-header .table-row .td-data.worker-profile, .table-schdule .table-body .table-row .td-data.worker-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+.table-schdule .table-header .table-row .td-data.worker-profile img, .table-schdule .table-body .table-row .td-data.worker-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid #cdcdcd;
+}
+.table-schdule .table-header .table-row .td-data.work-detail, .table-schdule .table-body .table-row .td-data.work-detail {
+  padding: 1px;
+}
+.table-schdule .table-header .table-row .td-data.work-detail > div, .table-schdule .table-body .table-row .td-data.work-detail > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.table-schdule .table-header .table-row .td-data.work-detail > div span, .table-schdule .table-body .table-row .td-data.work-detail > div span {
+  font-weight: 500;
+}
+.table-schdule .table-header .table-row .td-data.work-detail .on-duty, .table-schdule .table-body .table-row .td-data.work-detail .on-duty {
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid green;
+  border-radius: 5px;
+  color: green;
+  background-color: #f2fff2;
+}
+.table-schdule .table-header .table-row .td-data.work-detail .vacation-leave, .table-schdule .table-body .table-row .td-data.work-detail .vacation-leave {
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid purple;
+  border-radius: 5px;
+  color: white;
+  background-color: #9d73a1;
+}
+.table-schdule .table-header .table-row .td-data.work-detail .absent, .table-schdule .table-body .table-row .td-data.work-detail .absent {
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: white;
+  background-color: #c73c3c;
+}
+.table-schdule .table-header .table-row .td-data.work-detail .offday, .table-schdule .table-body .table-row .td-data.work-detail .offday {
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid green;
+  border-radius: 5px;
+  color: white;
+  background-color: #85c7a4;
+}
+.table-schdule .table-header .table-row:last-child .td-data, .table-schdule .table-body .table-row:last-child .td-data {
+  border-bottom: 1px solid #cdcdcd;
+}
 
 .control-container {
-  padding: 30px;
+  padding: 0px 30px;
 }
 .control-container .control-footer {
   margin-top: 10px;
