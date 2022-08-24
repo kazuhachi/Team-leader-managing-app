@@ -275,249 +275,229 @@
                             </div>
                         </div>
                         <div class="leave-data-container">
-                            <!-- <div class="tab-button-container">
-                                <div class="tab-item-button selected" data-tab-target-id="pending-request-content-tab">
-                                        <div class="icon"></div>
-                                        <div class="lable">Pending request</div>
-                            
-                                </div>
-                                <div class="tab-item-button" data-tab-target-id="request-history-content-tab">
-                                    <div class="icon"></div>
-                                    <div class="lable">Request History</div>
-                                    
-                                </div>
-                            </div> -->
-                            
-                            <div class="tab-content">
-                                <div class="tab-content-item" id="pending-request-content-tab">
-                                    <!-- <div class="info">
-                                        search cretiria
-                                    </div> -->
-                                    <div class="control-container" style="display: none;">
+                                <div class="control-container" style="display: none;">
+                                    <div class="control-component" control-type="select-calendar">
+                                        <div class="label-icon">
+                                            Select week
+                                        </div>
+                                        <input type="text" class="input-date-range-picker">
+                                    </div>
+                                    <div class="control-component" control-type="dropdown">
+                                        <div class="label-icon">
+                                            Shift schedule
+                                        </div>
+                                        <select>
+                                            <option ></option>
+                                            <option value="morning">Morning Shift</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div class="control-footer"> -->
+                                        <!-- for submit buttons -->
                                         <div class="control-component" control-type="select-calendar">
-                                            <div class="label-icon">
-                                                Select week
-                                            </div>
-                                            <input type="text" class="input-date-range-picker">
+                                            <button>
+                                                Submit
+                                            </button>
                                         </div>
-                                        <div class="control-component" control-type="dropdown">
-                                            <div class="label-icon">
-                                                Shift schedule
-                                            </div>
-                                            <select>
-                                                <option ></option>
-                                                <option value="morning">Morning Shift</option>
-                                            </select>
-                                        </div>
-                                        <!-- <div class="control-footer"> -->
-                                            <!-- for submit buttons -->
-                                            <div class="control-component" control-type="select-calendar">
-                                                <button>
-                                                    Submit
+                                    <!-- </div> -->
+                                </div>
+                                
+                                <div class="pending-request-table">
+                                    <div class="title">Pending request</div>
+                                    <div class="table-action-container">
+                                        
+                                        <div class="action-button-container">
+                                            <div class="left-button-containers">
+                                                <button class="edit-selected-data unusable">
+                                                    <i class="fa-regular fa-pen-to-square "></i>
+                                                    Modify
+                                                </button>
+                                                <button class="delete-selected-data unusable">
+                                                    <i class="fa-regular fa-trash-can"></i>
+                                                    Delete
                                                 </button>
                                             </div>
-                                        <!-- </div> -->
-                                    </div>
-                                    
-                                    <div class="pending-request-table">
-                                        <div class="title">Pending request</div>
-                                        <div class="table-action-container">
-                                            
-                                            <div class="action-button-container">
-                                                <div class="left-button-containers">
-                                                    <button class="edit-selected-data unusable">
-                                                        <i class="fa-regular fa-pen-to-square "></i>
-                                                        Modify
-                                                    </button>
-                                                    <button class="delete-selected-data unusable">
-                                                        <i class="fa-regular fa-trash-can"></i>
-                                                        Delete
-                                                    </button>
-                                                </div>
-                                                <div class="right-button-containers">
-                                                    <button class="add-request-leave">
-                                                        <i class="fa-regular fa-calendar-plus"></i>
-                                                        Request a leave
-                                                    </button>
-                                                </div>
+                                            <div class="right-button-containers">
+                                                <button class="add-request-leave">
+                                                    <i class="fa-regular fa-calendar-plus"></i>
+                                                    Request a leave
+                                                </button>
                                             </div>
                                         </div>
-                                        <table id="pendiing-request-tale" class="table table-hover table-bordered table-responsive-sm" >
-                                            <thead>
-                                                <!-- <tr>
-                                                    <td colspan="2"></td>
-                                                    <th colspan="9" style="text-align: center">SCHEDULE</th>
-                                                </tr> -->
-                                                <tr>
-                                                    <th></th>
-                                                    <th>Leave type</th>                                                    
-                                                    <th>Status</th>
-                                                    <th>Date covered</th>
-                                                    <th>No. of date covered</th>
-                                                    <th>Reason</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="checkbox-container"><input type="checkbox"/></td>
-                                                    <td>Vacation Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="pending-status">pending</div>
-                                                    </td>
-                                                    <td>July 22, 2022 - July 23, 2022</td>
-                                                    <td>2</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="checkbox-container"><input type="checkbox"/></td>
-                                                    <td>Emergency Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="pending-status">pending</div>
-                                                    </td>
-                                                    <td>July 21, 2022 - July 21, 2022</td>
-                                                    <td>1</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="checkbox-container"><input type="checkbox"/></td>
-                                                    <td>Sick Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="pending-status">pending</div>
-                                                    </td>
-                                                    <td>July 19, 2022 - July 20, 2022</td>
-                                                    <td>2</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-
-                                        <!-- if no data available -->
-                                        
                                     </div>
-                                    <div class="pending-request-table">
-                                        <div class="title">Approved request</div>
-                                        <!-- <div class="table-action-container">
-                                            
-                                            <div class="action-button-container">
-                                                <div class="left-button-containers">
-                                                    <button class="edit-selected-data unusable">
-                                                        <i class="fa-regular fa-pen-to-square "></i>
-                                                        Modify
-                                                    </button>
-                                                    <button class="delete-selected-data unusable">
-                                                        <i class="fa-regular fa-trash-can"></i>
-                                                        Delete
-                                                    </button>
-                                                </div>
-                                                <div class="right-button-containers">
-                                                    <button class="add-request-leave">
-                                                        <i class="fa-regular fa-calendar-plus"></i>
-                                                        Request a leave
-                                                    </button>
-                                                </div>
+                                    <table id="pendiing-request-tale" class="table table-hover table-bordered table-responsive-sm" >
+                                        <thead>
+                                            <!-- <tr>
+                                                <td colspan="2"></td>
+                                                <th colspan="9" style="text-align: center">SCHEDULE</th>
+                                            </tr> -->
+                                            <tr>
+                                                <th></th>
+                                                <th>Leave type</th>                                                    
+                                                <th>Status</th>
+                                                <th>Date covered</th>
+                                                <th>No. of date covered</th>
+                                                <th>Reason</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="checkbox-container"><input type="checkbox"/></td>
+                                                <td>Vacation Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="pending-status">pending</div>
+                                                </td>
+                                                <td>July 22, 2022 - July 23, 2022</td>
+                                                <td>2</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="checkbox-container"><input type="checkbox"/></td>
+                                                <td>Emergency Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="pending-status">pending</div>
+                                                </td>
+                                                <td>July 21, 2022 - July 21, 2022</td>
+                                                <td>1</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="checkbox-container"><input type="checkbox"/></td>
+                                                <td>Sick Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="pending-status">pending</div>
+                                                </td>
+                                                <td>July 19, 2022 - July 20, 2022</td>
+                                                <td>2</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- if no data available -->
+                                    
+                                </div>
+                                <div class="pending-request-table">
+                                    <div class="title">Approved request</div>
+                                    <!-- <div class="table-action-container">
+                                        
+                                        <div class="action-button-container">
+                                            <div class="left-button-containers">
+                                                <button class="edit-selected-data unusable">
+                                                    <i class="fa-regular fa-pen-to-square "></i>
+                                                    Modify
+                                                </button>
+                                                <button class="delete-selected-data unusable">
+                                                    <i class="fa-regular fa-trash-can"></i>
+                                                    Delete
+                                                </button>
                                             </div>
-                                        </div> -->
-                                        <table id="approved-request-table" class="table table-hover table-bordered table-responsive-sm" >
-                                            <thead>
-                                                <!-- <tr>
-                                                    <td colspan="2"></td>
-                                                    <th colspan="9" style="text-align: center">SCHEDULE</th>
-                                                </tr> -->
-                                                <tr>
-                                                    <th>Leave type</th>                                                    
-                                                    <th>Status</th>
-                                                    <th>Date covered</th>
-                                                    <th>No. of date covered</th>
-                                                    <th>Reason</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    
-                                                    <td>Vacation Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="approved-status">Approved</div>
-                                                    </td>
-                                                    <td>July 22, 2022 - July 23, 2022</td>
-                                                    <td>2</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                                <tr>
-                                                    
-                                                    <td>Emergency Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="approved-status">Approved</div>
-                                                    </td>
-                                                    <td>July 21, 2022 - July 21, 2022</td>
-                                                    <td>1</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                                <tr>
-                                                    
-                                                    <td>Sick Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="approved-status">Approved</div>
-                                                    </td>
-                                                    <td>July 19, 2022 - July 20, 2022</td>
-                                                    <td>2</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                                <tr>
-                                                    
-                                                    <td>Sick Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="approved-status">Approved</div>
-                                                    </td>
-                                                    <td>July 19, 2022 - July 20, 2022</td>
-                                                    <td>2</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                                <tr>
-                                                    
-                                                    <td>Sick Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="approved-status">Approved</div>
-                                                    </td>
-                                                    <td>July 19, 2022 - July 20, 2022</td>
-                                                    <td>2</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                                <tr>
-                                                    
-                                                    <td>Sick Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="approved-status">Approved</div>
-                                                    </td>
-                                                    <td>July 19, 2022 - July 20, 2022</td>
-                                                    <td>2</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                                <tr>
-                                                    
-                                                    <td>Sick Leave</td>                                                    
-                                                    <td class="status-type">
-                                                       <div class="approved-status">Approved</div>
-                                                    </td>
-                                                    <td>July 19, 2022 - July 20, 2022</td>
-                                                    <td>2</td>
-                                                    <td>Vacation, chil chil and relax</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                            <div class="right-button-containers">
+                                                <button class="add-request-leave">
+                                                    <i class="fa-regular fa-calendar-plus"></i>
+                                                    Request a leave
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <table id="approved-request-table" class="table table-hover table-bordered table-responsive-sm" >
+                                        <thead>
+                                            <!-- <tr>
+                                                <td colspan="2"></td>
+                                                <th colspan="9" style="text-align: center">SCHEDULE</th>
+                                            </tr> -->
+                                            <tr>
+                                                <th>Leave type</th>                                                    
+                                                <th>Status</th>
+                                                <th>Date covered</th>
+                                                <th>No. of date covered</th>
+                                                <th>Reason</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td>Vacation Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="approved-status">Approved</div>
+                                                </td>
+                                                <td>July 22, 2022 - July 23, 2022</td>
+                                                <td>2</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>Emergency Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="approved-status">Approved</div>
+                                                </td>
+                                                <td>July 21, 2022 - July 21, 2022</td>
+                                                <td>1</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>Sick Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="approved-status">Approved</div>
+                                                </td>
+                                                <td>July 19, 2022 - July 20, 2022</td>
+                                                <td>2</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>Sick Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="approved-status">Approved</div>
+                                                </td>
+                                                <td>July 19, 2022 - July 20, 2022</td>
+                                                <td>2</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>Sick Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="approved-status">Approved</div>
+                                                </td>
+                                                <td>July 19, 2022 - July 20, 2022</td>
+                                                <td>2</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>Sick Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="approved-status">Approved</div>
+                                                </td>
+                                                <td>July 19, 2022 - July 20, 2022</td>
+                                                <td>2</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>Sick Leave</td>                                                    
+                                                <td class="status-type">
+                                                    <div class="approved-status">Approved</div>
+                                                </td>
+                                                <td>July 19, 2022 - July 20, 2022</td>
+                                                <td>2</td>
+                                                <td>Vacation, chil chil and relax</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                        <!-- if no data available -->
-                                        
-                                    </div>
-                                    <div class="no-data-table-placeholder" style="display: none">
-                                        No pending request.
-                                    </div>
+                                    <!-- if no data available -->
+                                    
+                                </div>
+                                <div class="no-data-table-placeholder" style="display: none">
+                                    No pending request.
+                                </div>
                                     
                                 </div>
                                 <div class="tab-content-item" id="request-history-content-tab">
                                     
                                 </div>
-                                
-                            </div>
                         </div>
                     </div>
                 </div>

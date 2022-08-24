@@ -22,6 +22,7 @@
         <!--  --> <script src="scripts/notificationPopUp.js"></script>
         <!--  --> <script src="scripts/slidePages.js"></script>
         <!--  --> <script src="scripts/tab.js"></script>
+        <!--  --> <script src="scripts/table.js"></script>
 
 
         <!-- datepicker -->
@@ -179,7 +180,7 @@
                                 </div>
                             </div>
                             <div class="tab-content">
-                                <div class="tab-content-item" id="view-schedule">
+                                <div class="tab-content-item selected" id="view-schedule">
                                     <!-- <div class="info">
                                         search cretiria
                                     </div> -->
@@ -889,7 +890,706 @@
                                     
                                 </div>
                                 <div class="tab-content-item" id="schedule-manager">
-                                    schedule-manager
+                                    <div class="control-container">
+                                        <div class="control-component" control-type="select-calendar">
+                                            <div class="label-icon">
+                                                Select week
+                                                
+                                            </div>
+                                            <input type="text" class="input-date-range-picker">
+                                        </div>
+                                        <div class="control-component" control-type="dropdown">
+                                            <div class="label-icon">
+                                                Shift schedule
+                                            </div>
+                                            <select>
+                                                <option ></option>
+                                                <option value="morning">Morning Shift</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <!-- <div class="control-footer"> -->
+                                            <!-- for submit buttons -->
+                                            <div class="control-component" control-type="select-calendar">
+                                                <button>
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+                                    
+                                    <div class="table-schedule">
+                                        <!-- <div class="schedule-header-info">
+                                            <div class="queried-date-container">
+                                                <span>Schedule : </span>
+                                                <span class="queried-date">July 25 - July 31 </span>
+                                            </div>
+                                            <div class="queried-shift-container">
+                                                <span>Shift : </span>
+                                                <span class="queried-date">Morning Shift</span>
+                                            </div>
+                                        </div> -->
+                                        <!-- <div class="criteria-result-container">
+                                            <div class="label">Chosen criteria : </div>
+                                            <div class="criteria-item-container">
+                                                <div class="criteria-item">
+                                                    July 25. 2022 - July 31, 2022
+                                                </div>
+                                                <div class="criteria-item">
+                                                    Morning Shift
+                                                </div>
+
+                                            </div>
+                                        </div> -->
+                                        <table id="examples" style="display: none" class="table table-hover table-bordered table-responsive-sm" >
+                                            <thead>
+                                                <!-- <tr>
+                                                    <td colspan="2"></td>
+                                                    <th colspan="9" style="text-align: center">SCHEDULE</th>
+                                                </tr> -->
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Staff</th>
+                                                    <th><div class="date"><span class="day-of-the-week">Mon</span><span class="date">25</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Tue</span><span class="date">26</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Wed</span><span class="date">27</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Thu</span><span class="date">28</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Fri</span><span class="date">29</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Sat</span><span class="date">30</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Sun</span><span class="date">31</span></div></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <!-- <img src="images/ppPlaceholder.png">  -->
+                                                            Mark Vincent
+                                                        </span>
+                                                    </th>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>
+                                                        <span class="picture">
+                                                            <!-- <img src="images/pp2.jpeg">  -->
+                                                            CJ
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>
+                                                        <span class="picture">
+                                                            <!-- <img src="images/pp3.jpeg">  -->
+                                                            Zoren
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>
+                                                        <span class="picture">
+                                                            <!-- <img src="images/pp4.jpeg">  -->
+                                                            Vergel
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>
+                                                        <span class="picture">
+                                                            <!-- <img src="images/pp5.jpeg">  -->
+                                                            Princess
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>
+                                                        <span class="picture">
+                                                            <!-- <img src="images/pp6.jpeg">  -->
+                                                            Louie
+                                                        </span>
+                                                    </td>
+                                                    <td><span class="leave sick-leave">Sick leave</span></td>
+                                                    <td><span class="leave sick-leave">Sick leave</span></td>
+                                                    <td><span class="leave sick-leave">Sick leave</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>
+                                                        <span class="picture">
+                                                            <!-- <img src="images/pp7.jpeg">  -->
+                                                            John Patrick
+                                                        </span>
+                                                    </td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <span class="picture">
+                                                            <!-- <img src="images/pp8.jpeg">  -->
+                                                            Lawiza
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave absent">Absent</span></td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table id="examples" style=" display: none" class="table table-hover table-bordered table-responsive-sm" >
+                                            <thead>
+                                                <!-- <tr>
+                                                    <td colspan="2"></td>
+                                                    <th colspan="9" style="text-align: center">SCHEDULE</th>
+                                                </tr> -->
+                                                <tr>
+                                                    <th>Staff</th>
+                                                    <th><div class="date"><span class="day-of-the-week">Mon</span><span class="date">25</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Tue</span><span class="date">26</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Wed</span><span class="date">27</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Thu</span><span class="date">28</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Fri</span><span class="date">29</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Sat</span><span class="date">30</span></div></th>
+                                                    <th><div class="date"><span class="day-of-the-week">Sun</span><span class="date">31</span></div></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="">
+                                                <tr>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <img src="images/ppPlaceholder.png"> 
+                                                            Mark Vincent
+                                                        </span>
+                                                    </th>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <img src="images/pp2.jpeg"> 
+                                                            CJ
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <img src="images/pp3.jpeg"> 
+                                                            Zoren
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <img src="images/pp4.jpeg"> 
+                                                            Vergel
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <img src="images/pp5.jpeg"> 
+                                                            Princess
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <img src="images/pp6.jpeg"> 
+                                                            Louie
+                                                        </span>
+                                                    </td>
+                                                    <td><span class="leave sick-leave">Sick leave</span></td>
+                                                    <td><span class="leave sick-leave">Sick leave</span></td>
+                                                    <td><span class="leave sick-leave">Sick leave</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <img src="images/pp7.jpeg"> 
+                                                            John Patrick
+                                                        </span>
+                                                    </td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="staff-td">
+                                                        <span class="picture">
+                                                            <img src="images/pp8.jpeg"> 
+                                                            Lawiza
+                                                        </span>
+                                                    </td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave day-off">Day off</span></td>
+                                                    <td>6am - 2pm</td>
+                                                    <td>6am - 2pm</td>
+                                                    <td><span class="leave absent">Absent</span></td>
+                                                    <td>6am - 2pm</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div id="table-scheduler" class="table-schdule">
+                                            <div class="table-header">
+                                                <div class="table-row">
+                                                    <div class="th-data" tabindex="0">Workers</div>
+                                                    <div class="th-data" tabindex="0">Mon 21</div>
+                                                    <div class="th-data" tabindex="0">Tue 22</div>
+                                                    <div class="th-data" tabindex="0">Wed 23</div>
+                                                    <div class="th-data" tabindex="0">Thu 24</div>
+                                                    <div class="th-data" tabindex="0">Fri 25</div>
+                                                    <div class="th-data" tabindex="0">Sat 26</div>
+                                                    <div class="th-data" tabindex="0">Sun 27</div>
+                                                </div>
+                                            </div>
+                                            <div class="table-body">
+                                                <div class="table-row">
+                                                    <div class="td-data worker-profile" tabindex="0">
+                                                        <div class="profile-picture">
+                                                            <img src="images/ppPlaceholder.png"> 
+                                                        </div>
+                                                        Mark
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="empty">
+                                                            Empty
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="empty">
+                                                            Empty
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="empty">
+                                                            Empty
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="empty">
+                                                            Empty
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="empty">
+                                                            Empty
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="empty">
+                                                            Empty
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-row">
+                                                    <div class="td-data worker-profile" tabindex="0">
+                                                        <div class="profile-picture">
+                                                            <img src="images/pp2.jpeg"> 
+                                                        </div>
+                                                        CJ
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="offday">
+                                                            <span>Offday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On leave</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-row">
+                                                    <div class="td-data worker-profile" tabindex="0">
+                                                        <div class="profile-picture">
+                                                            <img src="images/pp3.jpeg"> 
+                                                        </div>
+                                                        Princess
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="offday">
+                                                            <span>Offday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On leave</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-row">
+                                                    <div class="td-data worker-profile" tabindex="0">
+                                                        <div class="profile-picture">
+                                                            <img src="images/pp4.jpeg"> 
+                                                        </div>
+                                                        Vergel
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="offday">
+                                                            <span>Offday</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-row">
+                                                    <div class="td-data worker-profile" tabindex="0">
+                                                        <div class="profile-picture">
+                                                            <img src="images/pp5.jpeg"> 
+                                                        </div>
+                                                        Louie
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="offday">
+                                                            <span>Offday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="absent">
+                                                            <span>Absent</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On leave</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-row">
+                                                    <div class="td-data worker-profile" tabindex="0">
+                                                        <div class="profile-picture">
+                                                            <img src="images/pp6.jpeg"> 
+                                                        </div>
+                                                        Patrick
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="offday">
+                                                            <span>Offday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On leave</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-row">
+                                                    <div class="td-data worker-profile" tabindex="0">
+                                                        <div class="profile-picture">
+                                                            <img src="images/pp3.jpeg"> 
+                                                        </div>
+                                                        Lawiza
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="offday">
+                                                            <span>Offday</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On duty</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                    <div class="td-data work-detail" tabindex="0">
+                                                        <div class="on-duty">
+                                                            <span>On leave</span>
+                                                            6am -2pm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                             </div>

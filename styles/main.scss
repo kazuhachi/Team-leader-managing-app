@@ -581,6 +581,13 @@ body.blurred{
             .tab-content{
                 padding: 10px;
                 // border: 1px solid #cdcdcd;
+                .tab-content-item{
+                    display: none;
+                    &.selected{
+                        display: block;
+                    }
+                }
+
 
                 .table-schedule{
                     font-size: 14px;
@@ -765,14 +772,31 @@ body.blurred{
                 
             }
 
+            &:last-child{
+                & .td-data:first-child{
+                    border-radius: 0px 0px 0px 10px;
+                }
+                & .td-data:last-child{
+                    border-radius: 0px 0px 10px 0px;
+                }
+            }
+
             .th-data{
                 font-size: 14px;
                 padding: 10px 10px;
                 font-weight: bold;
+
+                &:first-child{
+                    border-radius: 10px 0px 0px 0px;
+                }
+                &:last-child{
+                    border-radius: 0px 10px 0px 0px;
+                }
             }
 
             .td-data{
                 font-size: 12px;
+
 
                 &.worker-profile{
                     display: flex;
@@ -800,6 +824,48 @@ body.blurred{
                             font-weight: 500;
                         }
                     }
+                    & .empty{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        align-items: center;
+                        flex-grow: 1;
+                        color: #cdcdcd;
+
+                        &:hover{
+                            position: relative;
+                            &::after{
+                                font-family: "Font Awesome 5 Free"; 
+                                content: "\2b";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: $readeableColor;
+                                padding: 10px 10px;
+                                font-weight: bold;
+                                font-size: 17px;
+                                background-color: #f2fff2;
+                                border: 2px dashed green;
+                                cursor: pointer;
+                                border-radius: 5px;
+                                animation: fadeInAddPseudo 300ms ;
+                            }
+
+                            @keyframes fadeInAddPseudo {
+                                from{
+                                    opacity: 0;
+                                }to{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
                     & .on-duty{
                         
                         padding: 10px 10px;

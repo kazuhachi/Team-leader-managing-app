@@ -459,6 +459,12 @@ body.blurred {
 .right-body .main-content-container .leave-data-container .tab-content, .right-body .main-content-container .tab-container .tab-content {
   padding: 10px;
 }
+.right-body .main-content-container .leave-data-container .tab-content .tab-content-item, .right-body .main-content-container .tab-container .tab-content .tab-content-item {
+  display: none;
+}
+.right-body .main-content-container .leave-data-container .tab-content .tab-content-item.selected, .right-body .main-content-container .tab-container .tab-content .tab-content-item.selected {
+  display: block;
+}
 .right-body .main-content-container .leave-data-container .tab-content .table-schedule, .right-body .main-content-container .tab-container .tab-content .table-schedule {
   font-size: 14px;
   padding: 30px;
@@ -572,10 +578,22 @@ body.blurred {
 .table-schdule .table-header .table-row .th-data:last-child, .table-schdule .table-header .table-row .td-data:last-child, .table-schdule .table-body .table-row .th-data:last-child, .table-schdule .table-body .table-row .td-data:last-child {
   border-right: 1px solid #cdcdcd;
 }
+.table-schdule .table-header .table-row:last-child .td-data:first-child, .table-schdule .table-body .table-row:last-child .td-data:first-child {
+  border-radius: 0px 0px 0px 10px;
+}
+.table-schdule .table-header .table-row:last-child .td-data:last-child, .table-schdule .table-body .table-row:last-child .td-data:last-child {
+  border-radius: 0px 0px 10px 0px;
+}
 .table-schdule .table-header .table-row .th-data, .table-schdule .table-body .table-row .th-data {
   font-size: 14px;
   padding: 10px 10px;
   font-weight: bold;
+}
+.table-schdule .table-header .table-row .th-data:first-child, .table-schdule .table-body .table-row .th-data:first-child {
+  border-radius: 10px 0px 0px 0px;
+}
+.table-schdule .table-header .table-row .th-data:last-child, .table-schdule .table-body .table-row .th-data:last-child {
+  border-radius: 0px 10px 0px 0px;
 }
 .table-schdule .table-header .table-row .td-data, .table-schdule .table-body .table-row .td-data {
   font-size: 12px;
@@ -604,6 +622,55 @@ body.blurred {
 }
 .table-schdule .table-header .table-row .td-data.work-detail > div span, .table-schdule .table-body .table-row .td-data.work-detail > div span {
   font-weight: 500;
+}
+.table-schdule .table-header .table-row .td-data.work-detail .empty, .table-schdule .table-body .table-row .td-data.work-detail .empty {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  color: #cdcdcd;
+}
+.table-schdule .table-header .table-row .td-data.work-detail .empty:hover, .table-schdule .table-body .table-row .td-data.work-detail .empty:hover {
+  position: relative;
+}
+.table-schdule .table-header .table-row .td-data.work-detail .empty:hover::after, .table-schdule .table-body .table-row .td-data.work-detail .empty:hover::after {
+  font-family: "Font Awesome 5 Free";
+  content: "+";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #636363;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: #f2fff2;
+  border: 2px dashed green;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-animation: fadeInAddPseudo 300ms;
+          animation: fadeInAddPseudo 300ms;
+}
+@-webkit-keyframes fadeInAddPseudo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAddPseudo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .table-schdule .table-header .table-row .td-data.work-detail .on-duty, .table-schdule .table-body .table-row .td-data.work-detail .on-duty {
   padding: 10px 10px;
