@@ -10,10 +10,16 @@
   color: #242454;
 }
 .leaves-statistics-container .stat-card-item {
+  background-color: #7982af;
   display: inline-flex;
   border-radius: 10px;
   color: white;
   margin: 0px 5px 5px 0px;
+}
+.leaves-statistics-container .stat-card-item:hover {
+  background-color: #a3a9c9;
+  transition: 400ms;
+  cursor: pointer;
 }
 .leaves-statistics-container .stat-card-item.leave-stat-container .remaining-section {
   padding: 20px;
@@ -61,9 +67,6 @@
 .leaves-statistics-container .stat-card-item.leave-stat-container .sub-section .leave-type-container .label-leave-type {
   display: flex;
   flex-direction: column;
-}
-.leaves-statistics-container .stat-card-item {
-  background-color: #a3a9c9;
 }
 
 .pending-request-table {

@@ -11,10 +11,20 @@
     }
 
     .stat-card-item{
+        
+        background-color: #7982af;
         display: inline-flex;
         border-radius: 10px;
         color: white;
         margin: 0px 5px 5px 0px;
+
+
+        &:hover{
+            background-color: #a3a9c9;
+            transition: 400ms;
+            cursor: pointer;
+        }
+
         &.leave-stat-container{
             
             .remaining-section{
@@ -73,9 +83,6 @@
                 }
             }
         }   
-    }
-    .stat-card-item{
-        background-color: #a3a9c9;
     }
 }
 
