@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
     $(".add-request-leave").on("click", function(){
-        $(".popper-forms-container").load("/subHTMLs/popUpForms.html");
+        $(".popper-forms-container").load("./subHTMLs/popUpForms.html");
     })
 
     $(".popper-forms-container").on("click", ".clickable-whole-wrapper", function(e){
