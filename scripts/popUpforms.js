@@ -22,19 +22,7 @@ $(document).ready(function(){
     // show request statistics when select in changed
     $(".popper-forms-container").on("change", "#leave-type", function(){
 
-        
-            
-        // $(".popper-forms-container").find(".request-statistics").css({
-        //     display : 'flex',
-        //     opacity : '0',
-        //     transform : 'translateY(-50px)'
-        // }).animate({
-            
-        //     transform : 'translateY(0px)',
-        //     opacity : '1'
-        // })
-
-
+    
         $(".popper-forms-container").find(".request-statistics").addClass("fade-in")
     })
         
