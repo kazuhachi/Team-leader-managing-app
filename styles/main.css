@@ -99,7 +99,7 @@ body.blurred {
   margin-bottom: 10px;
 }
 .left-body .left-body-content .profile-container .profile-pic .img-holder {
-  background-image: url(/images/ppPlaceholder.png);
+  background-image: url("./images/ppPlaceholder.png");
   border-radius: 100%;
   background-size: cover;
   width: 100%;
